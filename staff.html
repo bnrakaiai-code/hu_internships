@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อาจารย์และบุคลากร | IS SWU</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --swu-red: #931e1e;
+            --swu-dark: #701616;
+        }
+        body { 
+            font-family: 'Sarabun', sans-serif; 
+            background-color: #fcfcfc; 
+            color: #333; 
+        }
+        .navbar-swu { background-color: var(--swu-red); border-bottom: 4px solid whitesmoke; }
+        
+        /* Header Styling */
+        .staff-header {
+            background: linear-gradient(rgba(147, 30, 30, 0.9), rgba(147, 30, 30, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050853063-915894612264?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 50px;
+        }
+
+        /* Card Styling */
+        .staff-card { 
+            border: none; 
+            transition: all 0.3s ease; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .staff-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(147, 30, 30, 0.15); 
+        }
+        .img-container {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        .staff-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        .section-title { 
+            color: var(--swu-red);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #6c6c6c;
+        }
+        .email-link {
+            color: var(--swu-red);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .email-link:hover { color: #000; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-swu sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="https://en.bas.swu.ac.th/Portals/92/BlockBuilderImages/24133/Srinakharinwirot_Logo_EN_Color.png" width="40" height="40" class="me-2 bg-white rounded-circle p-1">
+                Information Study | บุคลากร
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-light rounded-pill px-4">
+                    <i class="bi bi-house-door me-1"></i> กลับหน้าหลัก
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="staff-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">อาจารย์และบุคลากร</h1>
+            <p class="lead">สาขาวิชาสารสนเทศศึกษา คณะมนุษยศาสตร์ มศว</p>
+        </div>
+    </header>
+
+    <div class="container pb-5">
+        
+        <h2 class="text-center section-title">กรรมการหลักสูตร</h2>
+        <div class="container py-5">
+        
+        <div class="row g-4 justify-content-center mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/Dit-scaled.jpg" class="staff-img" alt="อาจารย์ ดร. ดิษฐ์">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ดิษฐ์ สุทธิวงศ์</h5>
+                        <p class="text-danger small fw-bold mb-1">(ประธานกรรมการบริหารหลักสูตร)</p>
+                        <p class="text-muted small">Lecturer Dit Suthiwong, Ph.D.</p>
+                        <a href="mailto:dit@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> dit@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/thiti-scaled.jpg" class="staff-img" alt="อาจารย์ ดร. ฐิติ">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ฐิติ อติชาติชยากร</h5>
+                        <p class="text-danger small fw-bold mb-1">(เลขานุการหลักสูตร)</p>
+                        <p class="text-muted small">Lecturer Thiti Atichartchayakorn, Ph.D.</p>
+                        <a href="mailto:thitik@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> thitik@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Vipakorn-683x1024.jpg" class="staff-img" alt="ผศ.ดร. วิภากร">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">ผศ.ดร. วิภากร วัฒนสินธุ์</h5>
+                        <p class="text-muted small mb-2">Assistant Professor Vipakorn Vadhanasin, Ph.D.</p>
+                        <a href="mailto:vipakorn@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> vipakorn@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2025/02/Chokthamrong.jpg" class="staff-img" alt="อาจารย์ ดร. โชคธำรงค์">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์ ดร. โชคธำรงค์ จงจอหอ</h5>
+                        <p class="text-muted small mb-2">Lecturer Chokthamrong Chongchorhor, Ph.D.</p>
+                        <a href="mailto:chokthamrong@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> chokthamrong@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2025/11/Chotima.jpg" class="staff-img" alt="อาจารย์โชติมา">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์โชติมา วัฒนะ</h5>
+                        <p class="text-muted small mb-2">Lecturer Chotima Watana</p>
+                        <a href="mailto:chotimaw@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> chotimaw@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <h2 class="text-center section-title mt-5">อาจารย์ผู้สอน</h2>
+        <div class="row g-4 justify-content-center mb-5">
+            <!-- container1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Dussadee-683x1024.jpg" class="staff-img">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ดิษฐ์ สุทธิวงศ์</h5>
+                        <p class="text-muted small">Assistant Professor Dussadee Seewungkum, Ph.D.</p>
+                        <a href="mailto:dit@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> dussadee@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- container2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Sasipimol-683x1024.jpg" class="staff-img">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">ผู้ช่วยศาสตราจารย์ ดร. ศศิพิมล ประพินพงศกร</h5>
+                        <p class="text-muted small">Assistant Professor Sasipimol Prapinpongsakorn, Ph.D., FHEA</p>
+                        <a href="mailto:thitik@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> sasipimol@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- container3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card staff-card border-top border-danger border-5">
+                    <div class="img-container">
+                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Sumattra-683x1024.jpg" class="staff-img">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ศุมรรษตรา แสนวา</h5>
+                        <p class="text-muted small">Lecturer Sumattra Saenwa, Ph.D., FHEA</p>
+                        <a href="mailto:dit@g.swu.ac.th" class="email-link">
+                            <i class="bi bi-envelope-at-fill"></i> sumattra@g.swu.ac.th
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <footer class="py-5 text-white navbar-swu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <h5 class="fw-bold">Information Study, SWU</h5>
+                <p class="mb-0 small opacity-75">© 2026 สาขาวิชาสารสนเทศศึกษา คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+            </div>
+            
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-2 small fw-bold text-uppercase">ช่องทางติดต่อเรา</p>
+                <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                    <a href="https://www.facebook.com/isswuofficial/" target="_blank" class="text-white fs-4 transition-hover">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/is.hmswu/" target="_blank" class="text-white fs-4 transition-hover">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://x.com/IS_SWU" target="_blank" class="text-white fs-4 transition-hover">
+                        <i class="bi bi-twitter-x"></i> 
+                    </a>
+                    <a href="mailto:is@g.swu.ac.th" class="text-white fs-4 transition-hover">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
