@@ -1,0 +1,64 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar-swu {
+    background-color: #ffffff !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    padding: 15px 0;
+}
+
+.navbar-swu .nav-link {
+    color: #000000 !important; 
+    font-weight: 500;
+}
+
+.navbar-swu .nav-link:hover {
+    color: #931e1e !important;
+}
+
+.navbar-swu .navbar-brand {
+    color: #000000 !important;
+}
+/* --- ปุ่มสีแดง มศว --- */
+.btn-swu {
+    background-color: #931e1e;
+    color: white !important; /* บังคับตัวหนังสือสีขาว */
+    border-radius: 25px;
+    padding: 10px 30px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
+.btn-swu:hover {
+    background-color: #701616;
+    color: white !important; /* เป็นสีขาวเพื่อให้ตัวหนังสืออ่านง่าย */
+    transform: scale(1.05); /* ขยายปุ่มนิดหน่อยให้ดูมีมิติ */
+}
+
+.text-swu { 
+    color: #931e1e; 
+}
+.bg-swu-light { 
+    background-color: #fcf1f1; 
+}
+.info-card { 
+    border: none; border-left: 5px solid #931e1e; border-radius: 10px; 
+}
+.list-group-item { 
+    background-color: transparent; border-color: rgba(0,0,0,0.05); 
+}
+
+/* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */
+.transition-hover {
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.transition-hover:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: #ffc107 !important; /* เปลี่ยนเป็นสีเหลืองทองตามคอมเมนต์ */
+}

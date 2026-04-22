@@ -1,17 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$host = "localhost";
+$dbuser = "root";
+$dbpass = "";
 $dbname = "internships";
 
-// สร้างการเชื่อมต่อ
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// ตรวจสอบการเชื่อมต่อ
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    // แก้คำว่า dpname เป็น dbname เรียบร้อยแล้วครับ
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $dbuser, $dbpass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "connection failed: " . $e->getMessage();
 }
-
-// ตั้งค่าให้รองรับภาษาไทย
-mysqli_set_charset($conn, "utf8");
 ?>

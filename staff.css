@@ -1,0 +1,118 @@
+:root {
+    --swu-red: #931e1e;
+    --swu-dark: #701616;
+}
+
+body { 
+    font-family: 'Prompt', sans-serif; 
+    background-color: #fcfcfc; 
+    color: #333; 
+}
+
+/* Navbar */
+.navbar-swu {
+    background-color: #ffffff !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    padding: 15px 0;
+}
+.navbar-swu .nav-link {
+    color: #000000 !important; 
+    font-weight: 500;
+}
+.navbar-swu .nav-link:hover {
+    color: var(--swu-red) !important;
+}
+.navbar-swu .navbar-brand {
+    color: #000000 !important;
+}
+
+/* Buttons */
+.btn-swu {
+    background-color: var(--swu-red);
+    color: white !important;
+    border-radius: 25px;
+    padding: 10px 30px;
+    border: none;
+    transition: 0.3s;
+}
+.btn-swu:hover {
+    background-color: var(--swu-dark);
+    color: white !important;
+    transform: scale(1.05);
+}
+        
+/* Header Styling */
+.staff-header {
+    background: linear-gradient(rgba(147, 30, 30, 0.9), rgba(147, 30, 30, 0.9)), 
+                url('https://images.unsplash.com/photo-1523050853063-915894612264?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.staff-card { 
+    border: none; 
+    transition: all 0.3s ease; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+.staff-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(147, 30, 30, 0.15); 
+}
+.img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.staff-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.section-title { 
+    color: var(--swu-red);
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #6c6c6c; /* หรือถ้าอยากให้ขีดเส้นใต้เป็นสีแดง ให้เปลี่ยนเป็น var(--swu-red); */
+}
+.email-link {
+    color: var(--swu-red);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.email-link:hover { 
+    color: #000; 
+    text-decoration: underline; 
+}
+
+/* Footer Icon Hover Effect (พี่เพิ่มให้ตรงนี้ครับ) */
+.transition-hover {
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+.transition-hover:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: #ffc107 !important; /* เปลี่ยนเป็นสีเหลืองทอง */
+}

@@ -1,0 +1,73 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar-swu {
+    background-color: #ffffff !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    padding: 15px 0;
+}
+
+.navbar-swu .nav-link {
+    color: #000000 !important; 
+    font-weight: 500;
+}
+
+.navbar-swu .nav-link:hover {
+    color: #931e1e !important;
+}
+
+.navbar-swu .navbar-brand {
+    color: #000000 !important;
+}
+
+/* --- ส่วนของ Hero (แบนเนอร์ด้านบน) --- */
+.hero-section {
+    background: linear-gradient(rgba(193, 53, 53, 0.8), rgba(248, 115, 115, 0.8)), 
+                url('https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/630999360_1577242997321299_1647169606948081399_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2a1932&_nc_ohc=gD-4pEM3r7MQ7kNvwEHxpx6&_nc_oc=Adqt-oLO3lVLuG7xdnoDOADmLYNRqWDh4jKJr0QIHApDEKWWvquWRyNCvdkN97yR6BE&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=C3BoiTbdxHye0_RNvxsltg&_nc_ss=7a389&oh=00_Af1hHautKsJDnDucJhG6fb4OFFc2u_czKqJFjw7K56XCDw&oe=69EAE31E');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 150px 0;
+    text-align: center;
+}
+
+/* --- ปุ่มสีแดง มศว --- */
+.btn-swu {
+    background-color: #931e1e;
+    color: white !important; /* บังคับตัวหนังสือสีขาว */
+    border-radius: 25px;
+    padding: 10px 30px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
+.btn-swu:hover {
+    background-color: #701616;
+    color: white !important; /* เป็นสีขาวเพื่อให้ตัวหนังสืออ่านง่าย */
+    transform: scale(1.05); /* ขยายปุ่มนิดหน่อยให้ดูมีมิติ */
+}
+
+/* --- การ์ดข่าวสาร --- */
+.news-card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */
+.transition-hover {
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.transition-hover:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: #ffc107 !important; /* เปลี่ยนเป็นสีเหลืองทองตามคอมเมนต์ */
+}
