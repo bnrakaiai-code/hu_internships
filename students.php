@@ -69,9 +69,9 @@ $result = $conn->query($sql);
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">บุคลากร</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#">คณะอาจารย์</a></li>
-                            <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#">คณะผู้จัดทำ</a></li>
-                            <li><a class="dropdown-menu-item nav-link text-dark px-3 fw-bold" href="#">สมุดรายชื่อนิสิต</a></li>
+                            <li><a class="dropdown-menu-item nav-link text-dark px-3" href="staff_1.php">คณะอาจารย์</a></li>
+                            <li><a class="dropdown-menu-item nav-link text-dark px-3" href="staff_2.php">คณะผู้จัดทำ</a></li>
+                            <li><a class="dropdown-menu-item nav-link text-dark px-3 fw-bold" href="students.php">สมุดรายชื่อนิสิต</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
