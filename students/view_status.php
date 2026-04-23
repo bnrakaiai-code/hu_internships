@@ -11,15 +11,13 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
 $student_id = $_SESSION['user_id'];
 
 // ดึงคำร้องทั้งหมดของนิสิต
-// 💡 จุดแก้ไขที่ 1: เปลี่ยน ORDER BY r.request_date เป็นคอลัมน์ที่มีอยู่จริง (สมมติว่าเป็น create_at)
-// หากใน Database ของคุณใช้ชื่ออื่น เช่น created_at หรือ date_submitted ให้เปลี่ยนตรงนี้ด้วยครับ
 $stmt = $conn->prepare("
     SELECT r.*, s.status_name, c.company_name 
     FROM internship_requests r
     JOIN status_list s ON r.status_id = s.status_id
     JOIN companies c ON r.company_id = c.company_id
     WHERE r.student_id = :id
-    ORDER BY r.create_at DESC 
+    ORDER BY r.request_date DESC 
 ");
 $stmt->execute(['id' => $student_id]);
 $requests = $stmt->fetchAll();
@@ -83,8 +81,8 @@ $requests = $stmt->fetchAll();
                                 
                                 <td>
                                     <?php 
-                                        if (!empty($req['create_at'])) {
-                                            echo date('d/m/Y', strtotime($req['create_at'])); 
+                                        if (!empty($req['request_date'])) {
+                                            echo date('d/m/Y', strtotime($req['request_date'])); 
                                         } else {
                                             echo "-";
                                         }

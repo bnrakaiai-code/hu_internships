@@ -1,10 +1,9 @@
 <?php
 session_start();
-include('../includes/db_connect.php');
+include('../../includes/db_connect.php');
 
-// ตรวจสอบสิทธิ์
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSION['role'] !== 'staff')) {
-    header("Location: ../login.php");
+    header("Location: ../../login.php");
     exit();
 }
 

@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $role_condition = ""; // เพิ่มตัวแปรเช็ค Role ในตาราง staff
 
     // 1. กำหนดตารางและเงื่อนไขตามโครงสร้าง Database จริง
-    // แก้ไขใน check_login.php ตรงเงื่อนไขบทบาท
     if ($role == 'student') {
         $table = "students";
         $user_column = "student_id";    
@@ -22,13 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif ($role == 'staff') {
         $table = "staff";               
         $user_column = "role";
-        $role_condition = "AND role = 'admin'"; // แก้ตรงนี้ให้ตรงกับ Enum ในฐานข้อมูล
-        $redirect_page = "staff/index.php"; 
+        $role_condition = "AND role = 'admin'"; 
+        $redirect_page = "staff/admin/index.php"; 
     } elseif ($role == 'teacher') {
         $table = "staff";               
         $user_column = "role";
-        $role_condition = "AND role = 'teacher'"; // ตรงนี้ถูกแล้ว
-        $redirect_page = "teacher/index.php"; 
+        $role_condition = "AND role = 'teacher'"; 
+        $redirect_page = "staff/teacher/index.php"; 
     } else {
         $_SESSION['error'] = "ประเภทผู้ใช้งานไม่ถูกต้อง";
         header("Location: login.php");

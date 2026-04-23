@@ -13,10 +13,34 @@ unset($_SESSION['error']);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Prompt', sans-serif; background: #f4f4f4; display: flex; align-items: center; min-height: 100vh; }
-        .login-card { max-width: 400px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid #931e1e; }
-        .btn-swu { background: #931e1e; color: white; border-radius: 25px; font-weight: 600; transition: 0.3s; }
-        .btn-swu:hover { background: #701616; color: white; transform: scale(1.02); }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background: #f4f4f4; 
+            display: flex; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        .login-card { 
+            max-width: 400px; 
+            margin: auto; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-top: 5px solid #931e1e; 
+        }
+        .btn-swu { 
+            background: #931e1e; 
+            color: white; 
+            border-radius: 25px; 
+            font-weight: 600; 
+            transition: 0.3s; 
+        }
+        .btn-swu:hover { 
+            background: #701616; 
+            color: white; 
+            transform: scale(1.02); 
+        }
     </style>
 </head>
 <body>
@@ -45,7 +69,7 @@ unset($_SESSION['error']);
             </div>
             <button type="submit" class="btn btn-swu w-100 mb-3">เข้าสู่ระบบ</button>
             <div class="text-center">
-                <small>หากลืมรหัสผ่าน? <a href="student/register.php" class="text-decoration-none">forget password</a></small>
+                <small>กลับหน้าหลัก <a href="index.php" class="text-decoration-none">click</a></small>
             </div>
         </form>
     </div>

@@ -1,27 +1,27 @@
 <?php
 session_start();
-include('../includes/db_connect.php');
+include('../../includes/db_connect.php');
 
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSION['role'] !== 'staff')) {
-    header("Location: ../login.php");
+    header("Location: ../../login.php");
     exit();
 }
 
 // ดึงคำร้องทั้งหมด พร้อมข้อมูลนิสิต บริษัท และสถานะ 
-// 💡 ข้อควรระวัง: เช็คชื่อตาราง users และคอลัมน์ fullname ว่าตรงกับ Database ของคุณหรือไม่ (ถ้าใช้ตาราง students ให้แก้เป็น students)
 $sql = "
-    SELECT r.*, s.status_name, c.company_name, u.fullname
+    SELECT r.*, s.status_name, c.company_name, st.fullname
     FROM internship_requests r
     JOIN status_list s ON r.status_id = s.status_id
     JOIN companies c ON r.company_id = c.company_id
-    JOIN users u ON r.student_id = u.user_id
+    JOIN students st ON r.student_id = st.student_id
     ORDER BY r.request_date DESC
 ";
+
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $requests = $stmt->fetchAll();
 
-// ดึงรายการสถานะทั้งหมดเพื่อไปทำ Dropdown (เช่น 1=รอตรวจสอบ, 2=อนุมัติ, 3=ไม่อนุมัติ)
+// ดึงรายการสถานะทั้งหมดเพื่อไปทำ Dropdown
 $stmt_status = $conn->query("SELECT * FROM status_list");
 $statuses = $stmt_status->fetchAll();
 ?>
@@ -89,34 +89,35 @@ $statuses = $stmt_status->fetchAll();
                                 <td><?php echo htmlspecialchars($req['position_title']); ?></td>
                                 <td>
                                     <?php 
-                                        echo !empty($req['request_date']) ? date('d/m/Y', strtotime($req['request_date'])) : "-"; 
+                                        echo !empty($req['create_at']) ? date('d/m/Y', strtotime($req['create_at'])) : "-"; 
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
                                         $badge = 'bg-secondary';
                                         if($req['status_id'] == 1) $badge = 'bg-warning text-dark';
-                                        if($req['status_id'] == 2) $badge = 'bg-success'; // สมมติ 2 = อนุมัติ
-                                        if($req['status_id'] == 3) $badge = 'bg-danger';  // สมมติ 3 = ไม่อนุมัติ
+                                        if($req['status_id'] == 2) $badge = 'bg-success'; 
+                                        if($req['status_id'] == 3) $badge = 'bg-danger';  
                                     ?>
                                     <span class="badge <?php echo $badge; ?> px-3 py-2 rounded-pill">
                                         <?php echo htmlspecialchars($req['status_name']); ?>
                                     </span>
                                 </td>
                                 <td class="text-center" style="min-width: 250px;">
-                                    <form action="approve_request.php" method="POST" class="d-flex justify-content-center gap-2">
-                                        <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
-                                        
-                                        <select name="status_id" class="form-select form-select-sm" style="width: 150px;">
-                                            <?php foreach($statuses as $status): ?>
-                                                <option value="<?php echo $status['status_id']; ?>" <?php echo ($req['status_id'] == $status['status_id']) ? 'selected' : ''; ?>>
-                                                    <?php echo htmlspecialchars($status['status_name']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        
-                                        <button type="submit" class="btn btn-swu btn-sm px-3 rounded-pill">อัปเดต</button>
-                                    </form>
+                                    <form action="update_status.php" method="POST" class="d-flex justify-content-center gap-2">
+    <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
+    
+    <?php if($req['status_id'] == 1): // แสดงปุ่มเฉพาะรายการที่ "รอการตรวจสอบ" ?>
+        <select name="status_id" class="form-select form-select-sm" style="width: 180px;">
+            <option value="1" selected>รอการตรวจสอบ</option>
+            <option value="4">✅ ส่งต่อให้เจ้าหน้าที่</option> <option value="3">❌ ไม่ผ่านการอนุมัติ</option>   </select>
+        <button type="submit" class="btn btn-swu btn-sm px-3 rounded-pill" style="background-color: #931e1e; color: white;">บันทึก</button>
+    <?php else: ?>
+        <span class="text-muted small">
+            <i class="bi bi-check-circle"></i> อาจารย์ตรวจสอบแล้ว
+        </span>
+    <?php endif; ?>
+</form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

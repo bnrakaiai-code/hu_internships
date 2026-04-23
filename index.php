@@ -110,8 +110,8 @@
             <div class="row">
                 <!-- News Item 1 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/670998104_1629937591589794_6485844448341266661_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=9z8ZiTwNjDsQ7kNvwE24Ez7&_nc_oc=Adpv9mCd2_Y3PlgNxwQJk4xObEleRWvPVphfxaXCWNSZAEJNlPRYZ4Qed7QVykv0KFw&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=S4b0yFxA-AmSBmvbKtL64Q&_nc_ss=7a389&oh=00_Af1YhL5-ibVRUct1GI6aM1t_40RlU8ia017_23UQSM3PLA&oe=69ED30CF" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/670998104_1629937591589794_6485844448341266661_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=9z8ZiTwNjDsQ7kNvwE24Ez7&_nc_oc=Adpv9mCd2_Y3PlgNxwQJk4xObEleRWvPVphfxaXCWNSZAEJNlPRYZ4Qed7QVykv0KFw&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=S4b0yFxA-AmSBmvbKtL64Q&_nc_ss=7a389&oh=00_Af1YhL5-ibVRUct1GI6aM1t_40RlU8ia017_23UQSM3PLA&oe=69ED30CF" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 17 Apr 2026</span>
@@ -126,8 +126,8 @@
                 </div>
                 <!-- News Item 2 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/510810177_1391707838746105_1169973082441495128_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=v1B3zml-vJ0Q7kNvwE98OhU&_nc_oc=Adp7GeAnUSEe6t6-rYbNDgo3AB9Ad6yHV77Krj7wYw-ovz9bA0pq9y0CkSSeP_0yUbk&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=ArxoOyUhu_b-cRVuY_Lkfw&_nc_ss=7a389&oh=00_Af0L7BCXAhEJ084hlixkBE_-sJ_DxJUVTSg3FqFMfsdp3w&oe=69ED5A2A" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/510810177_1391707838746105_1169973082441495128_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=v1B3zml-vJ0Q7kNvwE98OhU&_nc_oc=Adp7GeAnUSEe6t6-rYbNDgo3AB9Ad6yHV77Krj7wYw-ovz9bA0pq9y0CkSSeP_0yUbk&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=ArxoOyUhu_b-cRVuY_Lkfw&_nc_ss=7a389&oh=00_Af0L7BCXAhEJ084hlixkBE_-sJ_DxJUVTSg3FqFMfsdp3w&oe=69ED5A2A" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 24 Jun 2025</span>
@@ -142,8 +142,8 @@
                 </div>
                 <!-- News Item 3 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/511082402_1395557561694466_3455437914072884955_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=0G6hQK6l2IEQ7kNvwH2o8cK&_nc_oc=AdrEj_tbHNBNTxDobO1JkbF5ectzO7ucu0dfPNHtOAltX7NPeEhpAOxzBC-ojU2E5x4&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=iqx-wj6jkr3v9XWHuo0j3w&_nc_ss=7a389&oh=00_Af2IPf7Ev8G_Dy9ISNQ2jYNwc8-b_5N8l9XTQLSNHtdtEA&oe=69ED3C3C" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/511082402_1395557561694466_3455437914072884955_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=0G6hQK6l2IEQ7kNvwH2o8cK&_nc_oc=AdrEj_tbHNBNTxDobO1JkbF5ectzO7ucu0dfPNHtOAltX7NPeEhpAOxzBC-ojU2E5x4&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=iqx-wj6jkr3v9XWHuo0j3w&_nc_ss=7a389&oh=00_Af2IPf7Ev8G_Dy9ISNQ2jYNwc8-b_5N8l9XTQLSNHtdtEA&oe=69ED3C3C" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 10 Jun 2025</span>
@@ -168,8 +168,8 @@
             <div class="row">
                 <!-- News Item 1 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t39.30808-6/655661822_1613297087049223_2758694381761646677_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=y2z0_yHIu7AQ7kNvwH6aEpa&_nc_oc=AdoiuIMoONr1uab2ojIErTS8uYYnzVmP2SBQclRNtyTqQLVSRqZM6w5jcd0PJP9W2Ts&_nc_zt=23&_nc_ht=scontent.fbkk5-1.fna&_nc_gid=JixGEuTLx_icV1cmHJI9KQ&_nc_ss=7a389&oh=00_Af26QoMOeHs4maau-iGMBC3GOfp1xq2IAVDX39ifknJpqg&oe=69ED39AC" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t39.30808-6/655661822_1613297087049223_2758694381761646677_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=y2z0_yHIu7AQ7kNvwH6aEpa&_nc_oc=AdoiuIMoONr1uab2ojIErTS8uYYnzVmP2SBQclRNtyTqQLVSRqZM6w5jcd0PJP9W2Ts&_nc_zt=23&_nc_ht=scontent.fbkk5-1.fna&_nc_gid=JixGEuTLx_icV1cmHJI9KQ&_nc_ss=7a389&oh=00_Af26QoMOeHs4maau-iGMBC3GOfp1xq2IAVDX39ifknJpqg&oe=69ED39AC" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 23 Feb 2026</span>
@@ -184,23 +184,24 @@
                 </div>
                 <!-- News Item 2 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/493042177_1322665172779084_2061443328447931420_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=wXHcbs1s3QEQ7kNvwG9qfG0&_nc_oc=AdoHDC0SlYt5v4gK9wlnsJJa5QOXcvO_4t9cCR3Vu21NV2d6ctwftbResBDG7ZA4APg&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=rHoHlz_7epkgNXBzlb8vkA&oh=00_Af39i4aO24H0nkmZMp-joxAw5gVyc_0PKItBWrQvpDjgzw&oe=69F014E5" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
-                                <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 12 Oct 2024</span>
+                                <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 30 Oct 2024</span>
                                 <span><i class="bi bi-folder2 me-1"></i> Activity</span>
                             </div>
-                            <h5 class="card-title fw-bold">Annual Information Science Seminar 2024</h5>
-                            <p class="card-text text-muted">Join our expert speakers as they discuss the future of data management and AI in modern libraries.</p>
-                            <a href="#" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <h5 class="card-title fw-bold">นิสิตสารสนเทศศึกษา เยี่ยมชมห้องสมุดเพื่อการเรียนรู้ห้วยขวาง</h5>
+                            <p class="card-text text-muted">อาจารย์ประจำวิชา IS101 Information Resource Development (B02) หลักสูตรสารสนเทศศึกษา ได้พานิสิตภาคพิเศษ ชั้นปีที่ 1 
+                                เข้าเยี่ยมชม ศึกษาดูงาน ฟังบรรยายเกี่ยวกับกระบวนการพัฒนาทรัพยากรสารสนเทศ และทำกิจกรรมส่งเสริมการอ่าน ณ ห้องสมุดเพื่อการเรียนรู้ห้วยขวาง</p>
+                            <a href="https://www.facebook.com/share/p/1G16HYdNs4/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- News Item 3 -->
                 <div class="col-md-4">
-                    <div class="card card-elegant h-100 p-3">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-3 mb-3" alt="Event">
+                    <div class="card card-news h-100 p-3">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 12 Oct 2024</span>

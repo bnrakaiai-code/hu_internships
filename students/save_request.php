@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($company) {
             // กรณีมีรหัสบริษัทนี้อยู่แล้ว -> อัปเดตข้อมูลให้เป็นปัจจุบัน
-            // ✅ ปรับใช้คอลัมน์ address ตามที่คุณคอมเมนต์ไว้
             $stmt_upd = $conn->prepare("UPDATE companies SET company_name = :cname, company_address = :addr, contact_person = :cp WHERE company_id = :id");
             $stmt_upd->execute([
                 ':cname' => $company_name,
@@ -44,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $final_company_id = $input_company_id;
         } else {
             // กรณีไม่มีรหัสบริษัทนี้ -> Insert ใหม่ พร้อมระบุ company_id ที่ผู้ใช้กรอก
-            // ✅ ปรับใช้คอลัมน์ address ตามที่คุณคอมเมนต์ไว้
             $stmt_add_comp = $conn->prepare("INSERT INTO companies (company_id, company_name, company_address, contact_person, create_at) 
                                              VALUES (:id, :cname, :addr, :cp, NOW())");
             $stmt_add_comp->execute([

@@ -21,12 +21,13 @@ $query = "SELECT r.*, s.status_name, c.company_name
           JOIN status_list s ON r.status_id = s.status_id
           JOIN companies c ON r.company_id = c.company_id
           WHERE r.student_id = :id
-          ORDER BY r.create_at DESC LIMIT 1"; 
+          ORDER BY r.request_date DESC LIMIT 1"; 
 
 $stmt_req = $conn->prepare($query); // เตรียมคำสั่ง (ต้องมีบรรทัดนี้เพื่อป้องกันข้อผิดพลาด Undefined variable)
 $stmt_req->execute(['id' => $student_id]);
 $last_request = $stmt_req->fetch();
 ?>
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -89,7 +90,7 @@ $last_request = $stmt_req->fetch();
         <nav class="col-md-3 col-lg-2 d-md-block sidebar p-4 shadow">
             <div class="text-center mb-4">
                 <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
-                <h5 class="fw-bold">IS SWU</h5>
+                <h5 class="fw-bold">IS | SWU</h5>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link active" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>
@@ -138,21 +139,33 @@ $last_request = $stmt_req->fetch();
                         <?php if($last_request): ?>
                             <div class="p-4 border rounded-3 bg-light">
                                 <div class="row align-items-center">
-                                    <div class="col-md-8">
-                                        <h5 class="fw-bold mb-1"><?php echo $last_request['company_name']; ?></h5>
-                                        <p class="text-muted mb-2"><?php echo $last_request['position_title']; ?></p>
-
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold mb-1" style="word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
+                                            <?php echo htmlspecialchars($last_request['company_name']); ?>
+                                        </h5>
+                                        <p class="text-muted mb-2" style="word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
+                                            <?php echo htmlspecialchars($last_request['position_title']); ?>
+                                        </p>
                                         <small class="text-muted">
-                                            ส่งเมื่อ: <?php echo date('d/m/Y', strtotime($last_request['create_at'])); ?>
+                                            ส่งเมื่อ: <?php echo date('d/m/Y', strtotime($last_request['request_date'])); ?>
                                         </small>
                                     </div>
-                                    <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                        <span class="badge rounded-pill p-2 px-4 fs-6" style="background-color: #931e1e;">
-                                            <?php echo $last_request['status_name']; ?>
+        
+                                    <div class="col-md-5 mt-3 mt-md-0">
+                                        <?php 
+                                            $bg_color = '#989898'; // สีเทา (ค่าเริ่มต้น)
+                                            if(strpos($last_request['status_name'], 'รอ') !== false) $bg_color = '#ffc107; color: #000;'; // สีเหลือง
+                                            if(strpos($last_request['status_name'], 'อนุมัติ') !== false && strpos($last_request['status_name'], 'ไม่') === false) $bg_color = '#198754;'; // สีเขียว
+                                            if(strpos($last_request['status_name'], 'ไม่ผ่าน') !== false || strpos($last_request['status_name'], 'ยกเลิก') !== false) $bg_color = '#dc3545;'; // สีแดง
+                                        ?>
+                                        <span class="badge rounded-pill p-2 px-3 fs-6 w-100 text-center" 
+                                              style="background-color: <?php echo $bg_color; ?>; white-space: normal; word-break: break-word; line-height: 1.5; box-sizing: border-box;">
+                                            <?php echo htmlspecialchars($last_request['status_name']); ?>
                                         </span>
                                     </div>
                                 </div>
                             </div>
+    
 
                         <?php else: ?>
                             <div class="text-center py-5">

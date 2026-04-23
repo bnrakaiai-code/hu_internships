@@ -1,10 +1,12 @@
 <?php
 session_start();
-include('../includes/db_connect.php');
+// แก้ไขจุดที่ 1: ถอยหลัง 2 ชั้นเพื่อไปหาโฟลเดอร์ includes
+include('../../includes/db_connect.php');
 
 // ตรวจสอบสิทธิ์ ว่าเป็น teacher หรือ staff หรือไม่
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSION['role'] !== 'staff')) {
-    header("Location: ../login.php");
+    // แก้ไขจุดที่ 2: ถอยหลัง 2 ชั้นเพื่อไปหาไฟล์ login.php
+    header("Location: ../../login.php");
     exit();
 }
 
@@ -22,10 +24,28 @@ $pending_count = $stmt->fetchColumn();
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f4f7f6; }
-        .card-custom { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 5px solid #931e1e; }
-        .btn-swu { background: #931e1e; color: white; border-radius: 25px; padding: 10px 30px; transition: 0.3s; }
-        .btn-swu:hover { background: #701616; color: white; transform: scale(1.05); }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f4f7f6; 
+        }
+        .card-custom { 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+            border-top: 5px solid #931e1e; 
+        }
+        .btn-swu { 
+            background: #931e1e; 
+            color: white; 
+            border-radius: 25px; 
+            padding: 10px 30px; 
+            transition: 0.3s; 
+        }
+        .btn-swu:hover { 
+            background: #701616; 
+            color: white; 
+            transform: scale(1.05); 
+        }
     </style>
 </head>
 <body>
@@ -46,7 +66,7 @@ $pending_count = $stmt->fetchColumn();
                     <a href="view_all.php" class="btn btn-swu shadow-sm">
                         <i class="bi bi-card-list me-2"></i> ดูคำร้องทั้งหมด / อนุมัติคำร้อง
                     </a>
-                    <a href="../logout.php" class="btn btn-outline-secondary rounded-pill ms-2 px-4">
+                    <a href="../../logout.php" class="btn btn-outline-secondary rounded-pill ms-2 px-4">
                         ออกจากระบบ
                     </a>
                 </div>
