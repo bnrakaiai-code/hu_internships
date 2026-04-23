@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-swu sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.php">
                 <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" 
                  alt="SWU Logo" 
                  width="70" 

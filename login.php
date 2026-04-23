@@ -12,6 +12,7 @@ unset($_SESSION['error']);
     <title>เข้าสู่ระบบ | IS SWU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body { font-family: 'Prompt', sans-serif; background: #f4f4f4; display: flex; align-items: center; min-height: 100vh; }
         .login-card { max-width: 400px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid #931e1e; }
@@ -43,9 +44,14 @@ unset($_SESSION['error']);
                 <label class="form-label">รหัสผ่าน</label>
                 <input type="password" class="form-control" name="password" placeholder="password" required>
             </div>
-            <button type="submit" class="btn btn-swu w-100 mb-3">เข้าสู่ระบบ</button>
+            <button type="submit" class="btn btn-swu w-100 mb-3">
+                <i class="bi bi-box-arrow-in-right me-2"></i> เข้าสู่ระบบ
+            </button>
             <div class="text-center">
                 <small>หากลืมรหัสผ่าน? <a href="student/register.php" class="text-decoration-none">forget password</a></small>
+            </div>
+            <div class="text-center mt-3">
+                <a href="index.php" class="text-muted small">กลับสู่หน้าหลัก</a>
             </div>
         </form>
     </div>

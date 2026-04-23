@@ -22,8 +22,8 @@ body {
     color: #000000 !important;
 }
 
-/* --- ส่วนของ Hero (แบนเนอร์ด้านบน) --- */
-.hero-section {
+/* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
+.hero-section.slide-1 {
     background: linear-gradient(rgba(193, 53, 53, 0.8), rgba(248, 115, 115, 0.8)), 
                 url('https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/630999360_1577242997321299_1647169606948081399_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2a1932&_nc_ohc=gD-4pEM3r7MQ7kNvwEHxpx6&_nc_oc=Adqt-oLO3lVLuG7xdnoDOADmLYNRqWDh4jKJr0QIHApDEKWWvquWRyNCvdkN97yR6BE&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=C3BoiTbdxHye0_RNvxsltg&_nc_ss=7a389&oh=00_Af1hHautKsJDnDucJhG6fb4OFFc2u_czKqJFjw7K56XCDw&oe=69EAE31E');
     background-size: cover;
@@ -31,6 +31,69 @@ body {
     color: white; 
     padding: 150px 0;
     text-align: center;
+}
+
+/* Slide 2: ข่าวประชาสัมพันธ์ */
+.hero-section.slide-2 {
+    background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
+                url('https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/509939200_1391707805412775_6337660339211142142_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=LsVgTa6hMX8Q7kNvwGO6uUp&_nc_oc=AdqP9qJUAsdKULFJRXy75WiehWh61Yp_XVsCQl8EgtrDWd-ILJ_7Gh2nC2IdmSAa9nlqy25py5ppAgEs-UIGNTNz&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&_nc_gid=XhyEEMg2BrLXY3xU_HG37g&oh=00_Af1bl-ogLteK16Fs8ZIOrUrSaE38V3_Q3wPJOQLFjYN5zg&oe=69EFAF7D');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+}
+
+/* Slide 3: กิจกรรมสาขาวิชา */
+.hero-section.slide-3 {
+    background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
+                url('https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/655654281_1613297127049219_5826073833652133486_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EX6kvFkew34Q7kNvwHja4Ak&_nc_oc=Adq16-55PK_4-UFqCsNYEf24bKMef1pXTzzRbdo_0ZIXwQqwwdOWPLK0TZ6fbAFLx8fMB_VKcuDrv4u_f4lsnf52&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=OtT4yIyTU8jDzsNUwq0uRg&oh=00_Af1LkuJQKJ6wyobOCYOfuG1ltSw0WcQrf4ezavMuNV40JA&oe=69EFB239');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 150px 0;
+    text-align: center;
+}
+
+/* บังคับซ่อนทุกอย่างที่เป็นส่วนควบคุมของ Carousel */
+#swuCarousel .carousel-control-prev,
+#swuCarousel .carousel-control-next,
+#swuCarousel .carousel-indicators {
+    display: none !important;
+}
+
+/* เมื่อเอาเมาส์มาชี้ที่ Slide ให้เปลี่ยนจากซ่อน เป็นแสดงผล */
+#swuCarousel:hover .carousel-control-prev,
+#swuCarousel:hover .carousel-control-next,
+#swuCarousel:hover .carousel-indicators {
+    display: flex !important; /* ใช้ flex เพื่อให้ปุ่มจัดกลางตามมาตรฐาน Bootstrap */
+}
+
+/* 1. ขยายพื้นที่ปุ่มให้กว้างขึ้น เพื่อให้เราดันลูกศรไปชิดขอบจอได้จริง */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10vw !important; /* เพิ่มพื้นที่ให้ปุ่มควบคุมกว้างขึ้นเป็น 10% ของจอ */
+}
+
+/* 2. ดันลูกศรให้ไปชิดขอบจอ (ปรับเลข 0 เป็น 1, 2 ตามชอบ) */
+.carousel-control-prev {
+    left: 0 !important; 
+}
+.carousel-control-next {
+    right: 0 !important;
+}
+
+/* 3. ทำให้หัวลูกศร "หนา" และ "ใหญ่" ขึ้นแบบสะใจ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem !important;
+    height: 3rem !important;
+    /* เพิ่มความหนาด้วยเส้น Stroke */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath stroke='%23fff' stroke-width='1.5' stroke-linecap='round' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+}
+
+/* สลับด้านลูกศรขวาให้หนาเท่ากัน */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath stroke='%23fff' stroke-width='1.5' stroke-linecap='round' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
 
 /* --- ปุ่มสีแดง มศว --- */
@@ -70,4 +133,9 @@ body {
     opacity: 1;
     transform: scale(1.1);
     color: #ffc107 !important; /* เปลี่ยนเป็นสีเหลืองทองตามคอมเมนต์ */
+}
+
+/* สร้างระยะเผื่อให้กับ Section เมื่อถูกกดลิงก์มาที่หลักสูตร */
+.anchor-section {
+    scroll-margin-top: 100px; /* เว้นระยะด้านบนไว้ 100px ก่อนจะถึงหัวข้อ */
 }
