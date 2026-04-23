@@ -17,14 +17,29 @@ $conn->set_charset("utf8");
 
 // รับค่าคำค้นหาจาก Form
 $search = isset($_GET['search']) ? $_GET['search'] : '';
-
-// สร้างคำสั่ง SQL โดยใช้ชื่อคอลัมน์ตามโครงสร้างตารางจริง
+// 1. ต้องกำหนดค่าเริ่มต้นให้ $sql ก่อนเสมอ (ห้ามลืมบรรทัดนี้!)
 $sql = "SELECT student_id, fullname, email, year_level, major FROM students";
+
 if ($search != "") {
-    // ค้นหาจากชื่อ (fullname) หรือ รหัสนิสิต (student_id)
-    $sql .= " WHERE fullname LIKE '%" . $conn->real_escape_string($search) . "%' 
-              OR student_id LIKE '%" . $conn->real_escape_string($search) . "%'";
+    $safe_search = $conn->real_escape_string($search);
+    
+    // เอาเฉพาะตัวเลขสำหรับค้นหาชั้นปี
+    $number_only = preg_replace('/[^0-9]/', '', $search);
+
+    // เริ่มเงื่อนไข WHERE และต้องใช้ single quote (') ครอบ $safe_search ให้ถูกจุด
+    $sql .= " WHERE (fullname LIKE '%$safe_search%' 
+              OR student_id LIKE '%$safe_search%' 
+              OR email LIKE '%$safe_search%' 
+              OR major LIKE '%$safe_search%'";
+
+    // ถ้ามีตัวเลขผสมมาด้วย ให้เช็คชั้นปีเพิ่ม
+    if ($number_only != "") {
+        $sql .= " OR year_level LIKE '%$number_only%'";
+    }
+    
+    $sql .= ")"; // ปิดวงเล็บเงื่อนไข
 }
+
 $result = $conn->query($sql);
 ?>
 
