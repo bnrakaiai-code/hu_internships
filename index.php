@@ -8,6 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./index.css">
+    <style>
+        .card-news {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-news:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        }
+    </style>
 </head>
 <body>
 
@@ -237,15 +246,16 @@
                 <!-- News Item 3 -->
                 <div class="col-md-4">
                     <div class="card card-news h-100 p-3">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t39.30808-6/523032281_1416069249643297_3662674924218715301_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=TFPY5mF--e0Q7kNvwG_KTLx&_nc_oc=Adrq7MdGPd2U40iitdiuTXTaebPQ8Hf5aVsmPwUQKr8EKu6eNRorX0C0tVf1J_h7cKQ&_nc_zt=23&_nc_ht=scontent.fbkk5-5.fna&_nc_gid=7b1MjBhQZTSCvvv-fnwqtw&oh=00_Af2AB8ljNk0eDbVTTmjOnTZM4ZqR0mGVOUI6eqeWJFAC3w&oe=69F01EEA" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
-                                <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 12 Oct 2024</span>
+                                <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 24 Jul 2025</span>
                                 <span><i class="bi bi-folder2 me-1"></i> Activity</span>
                             </div>
-                            <h5 class="card-title fw-bold">Annual Information Science Seminar 2024</h5>
-                            <p class="card-text text-muted">Join our expert speakers as they discuss the future of data management and AI in modern libraries.</p>
-                            <a href="#" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <h5 class="card-title fw-bold">โครงการ "พัฒนาแหล่งเรียนรู้สู่ชุมชน"</h5>
+                            <p class="card-text text-muted">หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา ได้จัดโครงการพัฒนาแหล่งเรียนรู้สู่ชุมชน ณ โรงเรียนวัดวังปลาจีด จ.นครนายก และโรงเรียนวัดท่าช้าง (แสงปัญญาวิทยาคาร) จ.นครนายก 
+                                เพื่อให้นิสิตได้บูรณาการวิชาชีพสารสนเทศ กับการจัดแหล่งเรียนรู้ ที่มีประโยชน์ตรงตามความต้องการของชุมชน และมีทักษะทางปัญญา ทักษะชีวิต และทักษะวิชาชีพเพิ่มขึ้น</p>
+                            <a href="https://www.facebook.com/share/p/1Gtwbui7uD/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

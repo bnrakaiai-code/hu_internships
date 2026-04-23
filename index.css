@@ -115,20 +115,12 @@ body {
 
 /* --- การ์ดข่าวสาร --- */
 .card-news {
-    transition: all 0.3s ease-in-out; 
-    cursor: pointer;
-    border: none; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-news:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); 
-}
-
-.card-news:hover img {
-    filter: brightness(1.05); 
-    transition: 0.3s;
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
 /* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */

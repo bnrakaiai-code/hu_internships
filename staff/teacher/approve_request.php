@@ -2,40 +2,44 @@
 session_start();
 include('../../includes/db_connect.php');
 
+// เช็คสิทธิ์ความปลอดภัย
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSION['role'] !== 'staff')) {
     header("Location: ../../login.php");
     exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // รับค่าจาก Form
     $request_id = $_POST['request_id'];
-    $status_id = $_POST['status_id'];
+    $action = $_POST['action'];
+
+    // กำหนดสถานะเป้าหมาย
+    if ($action === 'approve') {
+        $new_status = 2; // อนุมัติโดยอาจารย์ -> ส่งต่อให้รอ Admin ดำเนินการ (status_id = 2)
+        $msg = "อนุมัติคำร้องหมายเลข " . sprintf("%03d", $request_id) . " เรียบร้อยแล้ว (ส่งต่อให้ Admin)";
+    } elseif ($action === 'reject') {
+        $new_status = 4; // ปฏิเสธคำร้อง (status_id = 4)
+        $msg = "ปฏิเสธคำร้องหมายเลข " . sprintf("%03d", $request_id) . " เรียบร้อยแล้ว";
+    }
 
     try {
-        // อัปเดตสถานะในตาราง internship_requests
-        // 💡 เช็คให้ชัวร์ว่า Primary Key ชื่อ request_id หรือไม่
-        $stmt = $conn->prepare("UPDATE internship_requests SET status_id = :status_id WHERE request_id = :req_id");
-        $stmt->execute([
-            ':status_id' => $status_id,
-            ':req_id'    => $request_id
-        ]);
-
-        echo "<script>
-                alert('อัปเดตสถานะคำร้องสำเร็จ!');
-                window.location.href = 'view_all.php';
-              </script>";
-
+        // อัปเดตข้อมูลในตาราง internship_requests
+        $stmt = $conn->prepare("UPDATE internship_requests SET status_id = :status WHERE request_id = :req_id");
+        $stmt->bindParam(':status', $new_status, PDO::PARAM_INT);
+        $stmt->bindParam(':req_id', $request_id, PDO::PARAM_INT);
+        
+        if ($stmt->execute()) {
+            $_SESSION['message'] = $msg;
+        } else {
+            $_SESSION['message'] = "เกิดข้อผิดพลาดในการอัปเดตข้อมูล";
+        }
     } catch (PDOException $e) {
-        // หากเกิด Error ให้แจ้งเตือนและกลับหน้าเดิม
-        echo "<script>
-                alert('เกิดข้อผิดพลาดในการอัปเดต: " . addslashes($e->getMessage()) . "');
-                window.history.back();
-              </script>";
+        $_SESSION['message'] = "Error: " . $e->getMessage();
     }
+
+    // กลับไปหน้า Dashboard
+    header("Location: index.php");
+    exit();
 } else {
-    // ถ้าไม่ได้เข้ามาผ่าน POST ให้เด้งกลับ
-    header("Location: view_all.php");
+    header("Location: index.php");
     exit();
 }
-?>

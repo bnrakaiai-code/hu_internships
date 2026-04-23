@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./staff.css">
+    <link rel="stylesheet" href="./staff1.css">
 </head>
 <body>
 
@@ -191,8 +191,9 @@
                 </div>
             </div>
         </div>
-
-    </div> <footer class="py-5 text-white" style="background-color: #931e1e;">
+    </div> 
+    
+    <footer class="py-5 text-white" style="background-color: #931e1e;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">

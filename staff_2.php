@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>อาจารย์และบุคลากร | IS SWU</title>
+    <title>คณะผู้จัดทำ | IS SWU</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./staff.css">
+    <link rel="stylesheet" href="./staff2.css">
+    <link rel="stylesheet" href="./img">
 </head>
 <body>
 
@@ -66,7 +67,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/Dit-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ดิษฐ์">
+                        <img src="https://i.postimg.cc/bNymgfqZ/paployii.jpg" class="staff-img w-100" alt="Bundita">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวบัณฑิตา จินรัตน์</h5>
@@ -82,7 +83,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/thiti-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ฐิติ">
+                        <img src="https://i.postimg.cc/q7sKWgLV/saalee.jpg" class="staff-img w-100" alt="Boonraksa">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวบุญรักษา น้อยอ้าย</h5>
@@ -95,13 +96,14 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <div class="row g-4 justify-content-center">
             <!-- admin 3 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/thiti-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ฐิติ">
+                        <img src="https://i.postimg.cc/XJsjt0Bx/hanaa.jpg" style="width: 250px; height: 250px; object-fit: cover;" class="staff-img w-100" alt="Papitchaya">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวปพิชญา จงศรีวัฒนาพร</h5>
@@ -117,7 +119,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/thiti-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ฐิติ">
+                        <img src="https://i.postimg.cc/4ydhKPTg/pimkim.jpg" class="staff-img w-100" alt="Mopim">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวโม๋พิม สุขประเสริฐ</h5>
@@ -129,8 +131,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-    </div> <footer class="py-5 text-white" style="background-color: #931e1e;">
+    <footer class="py-5 text-white" style="background-color: #931e1e;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">

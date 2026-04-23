@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $final_company_id = $input_company_id;
         } else {
             // กรณีไม่มีรหัสบริษัทนี้ -> Insert ใหม่ พร้อมระบุ company_id ที่ผู้ใช้กรอก
-            $stmt_add_comp = $conn->prepare("INSERT INTO companies (company_id, company_name, company_address, contact_person, create_at) 
-                                             VALUES (:id, :cname, :addr, :cp, NOW())");
+            $stmt_add_comp = $conn->prepare("INSERT INTO companies (company_id, company_name, company_address, contact_person) 
+                                             VALUES (:id, :cname, :addr, :cp)");
             $stmt_add_comp->execute([
                 ':id'    => $input_company_id,
                 ':cname' => $company_name,
@@ -55,8 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // 2. บันทึกข้อมูลลงตาราง internship_requests
-        $sql = "INSERT INTO internship_requests (student_id, company_id, position_title, start_date, end_date, status_id) 
-                VALUES (:student_id, :company_id, :position_title, :start_date, :end_date, :status_id)";
+        $sql = "INSERT INTO internship_requests (student_id, company_id, position_title, start_date, end_date, status_id, request_date) 
+                VALUES (:student_id, :company_id, :position_title, :start_date, :end_date, :status_id, NOW())";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute([

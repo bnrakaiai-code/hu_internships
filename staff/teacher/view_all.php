@@ -7,128 +7,102 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSIO
     exit();
 }
 
-// ดึงคำร้องทั้งหมด พร้อมข้อมูลนิสิต บริษัท และสถานะ 
-$sql = "
-    SELECT r.*, s.status_name, c.company_name, st.fullname
+// ดึงข้อมูลคำร้องทั้งหมด พร้อมชื่อสถานะ (สมมติว่า join กับตาราง status_list)
+// หากคุณไม่มีตาราง status_list ให้ลบ JOIN ออกแล้วใช้ if-else เช็คจาก status_id ใน HTML แทนได้ครับ
+$query = "
+    SELECT r.*, s.status_name 
     FROM internship_requests r
-    JOIN status_list s ON r.status_id = s.status_id
-    JOIN companies c ON r.company_id = c.company_id
-    JOIN students st ON r.student_id = st.student_id
+    LEFT JOIN status_list s ON r.status_id = s.status_id
     ORDER BY r.request_date DESC
 ";
-
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$requests = $stmt->fetchAll();
-
-// ดึงรายการสถานะทั้งหมดเพื่อไปทำ Dropdown
-$stmt_status = $conn->query("SELECT * FROM status_list");
-$statuses = $stmt_status->fetchAll();
+$stmt = $conn->query($query);
+$all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>จัดการคำร้องทั้งหมด | IS SWU</title>
+    <title>ดูคำขอทั้งหมด | IS SWU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { 
-            font-family: 'Prompt', sans-serif; 
-            background-color: #f4f7f6; 
-        }
-        .card-custom { 
-            border: none; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-        }
-        .btn-swu { 
-            background: #931e1e; 
-            color: white; 
-            transition: 0.3s; 
-        }
-        .btn-swu:hover { 
-            background: #701616; 
-            color: white; 
-        }
+        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
+        .sidebar { background: #931e1e; min-height: 100vh; color: white; position: sticky; top: 0; }
+        .nav-link { color: rgba(255,255,255,0.8); margin-bottom: 10px; border-radius: 10px; }
+        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
+        .card-custom { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
 
-<div class="container-fluid py-5 px-4">
-    <div class="card card-custom p-4">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold text-danger mb-0">
-                <i class="bi bi-list-check me-2"></i> รายการคำร้องขอฝึกงานของนิสิตทั้งหมด
-            </h3>
-            <a href="index.php" class="btn btn-outline-secondary rounded-pill px-4">กลับหน้าหลัก</a>
-        </div>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-4 shadow">
+            <div class="text-center mb-4">
+                <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
+                <h5 class="fw-bold">IS | SWU Teacher</h5>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>
+                <li class="nav-item"><a class="nav-link active" href="view_all.php"><i class="bi bi-card-list me-2"></i> ดูคำขอทั้งหมด</a></li>
+                <li class="nav-item mt-5"><a class="nav-link text-warning" href="../../logout.php"><i class="bi bi-box-arrow-left me-2"></i> ออกจากระบบ</a></li>
+            </ul>
+        </nav>
 
-        <div class="table-responsive">
-            <table class="table table-hover align-middle">
-                <thead class="table-light">
-                    <tr>
-                        <th>รหัสนิสิต</th>
-                        <th>ชื่อ-นามสกุล</th>
-                        <th>บริษัท</th>
-                        <th>ตำแหน่ง</th>
-                        <th>วันที่ยื่น</th>
-                        <th>สถานะปัจจุบัน</th>
-                        <th class="text-center">จัดการ (อนุมัติ/ปฏิเสธ)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if(count($requests) > 0): ?>
-                        <?php foreach($requests as $req): ?>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+            
+            <h3 class="fw-bold mb-4">ประวัติคำร้องของนิสิตทั้งหมด</h3>
+
+            <div class="card card-custom p-4 bg-white">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle text-center">
+                        <thead class="table-light">
                             <tr>
-                                <td><?php echo htmlspecialchars($req['student_id']); ?></td>
-                                <td><?php echo htmlspecialchars($req['fullname']); ?></td>
-                                <td><?php echo htmlspecialchars($req['company_name']); ?></td>
-                                <td><?php echo htmlspecialchars($req['position_title']); ?></td>
-                                <td>
-                                    <?php 
-                                        echo !empty($req['create_at']) ? date('d/m/Y', strtotime($req['create_at'])) : "-"; 
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php 
-                                        $badge = 'bg-secondary';
-                                        if($req['status_id'] == 1) $badge = 'bg-warning text-dark';
-                                        if($req['status_id'] == 2) $badge = 'bg-success'; 
-                                        if($req['status_id'] == 3) $badge = 'bg-danger';  
-                                    ?>
-                                    <span class="badge <?php echo $badge; ?> px-3 py-2 rounded-pill">
-                                        <?php echo htmlspecialchars($req['status_name']); ?>
-                                    </span>
-                                </td>
-                                <td class="text-center" style="min-width: 250px;">
-                                    <form action="update_status.php" method="POST" class="d-flex justify-content-center gap-2">
-    <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
-    
-    <?php if($req['status_id'] == 1): // แสดงปุ่มเฉพาะรายการที่ "รอการตรวจสอบ" ?>
-        <select name="status_id" class="form-select form-select-sm" style="width: 180px;">
-            <option value="1" selected>รอการตรวจสอบ</option>
-            <option value="4">✅ ส่งต่อให้เจ้าหน้าที่</option> <option value="3">❌ ไม่ผ่านการอนุมัติ</option>   </select>
-        <button type="submit" class="btn btn-swu btn-sm px-3 rounded-pill" style="background-color: #931e1e; color: white;">บันทึก</button>
-    <?php else: ?>
-        <span class="text-muted small">
-            <i class="bi bi-check-circle"></i> อาจารย์ตรวจสอบแล้ว
-        </span>
-    <?php endif; ?>
-</form>
-                                </td>
+                                <th>รหัสคำร้อง</th>
+                                <th>รหัสนิสิต</th>
+                                <th>วันที่ยื่นเรื่อง</th>
+                                <th>สถานะปัจจุบัน</th>
                             </tr>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <tr><td colspan="7" class="text-center py-4 text-muted">ยังไม่มีรายการคำร้อง</td></tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
-        </div>
+                        </thead>
+                        <tbody>
+                            <?php if (count($all_requests) > 0): ?>
+                                <?php foreach ($all_requests as $row): ?>
+                                <tr>
+                                    <td><?= sprintf("%03d", $row['request_id']) ?></td>
+                                    <td><?= htmlspecialchars($row['student_id']) ?></td>
+                                    <td><?= date('d/m/Y', strtotime($row['request_date'])) ?></td>
+                                    <td>
+                                        <?php 
+                                            // จัดสี Badge ตามสถานะ
+                                            $badge_class = "bg-secondary";
+                                            if ($row['status_id'] == 1) $badge_class = "bg-warning text-dark"; // รออาจารย์
+                                            elseif ($row['status_id'] == 2) $badge_class = "bg-info text-dark"; // รอแอดมิน
+                                            elseif ($row['status_id'] == 3) $badge_class = "bg-success"; // อนุมัติแล้ว
+                                            elseif ($row['status_id'] == 4) $badge_class = "bg-danger"; // ปฏิเสธ
+
+                                            // ถ้าไม่มีตาราง status_list ให้เปลี่ยน $row['status_name'] เป็นข้อความเองได้เลยครับ
+                                            $status_text = isset($row['status_name']) ? $row['status_name'] : "สถานะ " . $row['status_id'];
+                                        ?>
+                                        <span class="badge rounded-pill <?= $badge_class ?> px-3 py-2">
+                                            <?= htmlspecialchars($status_text) ?>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr><td colspan="4" class="text-center text-muted py-3">ยังไม่มีข้อมูลคำร้องในระบบ</td></tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

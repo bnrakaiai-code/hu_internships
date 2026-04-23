@@ -72,10 +72,7 @@ unset($_SESSION['error']);
                 <i class="bi bi-box-arrow-in-right me-2"></i> เข้าสู่ระบบ
             </button>
             <div class="text-center">
-                <small>กลับหน้าหลัก <a href="index.php" class="text-decoration-none">click</a></small>
-            </div>
-            <div class="text-center mt-3">
-                <a href="index.php" class="text-muted small">กลับสู่หน้าหลัก</a>
+                <small>กลับหน้าหลัก <a href="index.php" class="text-decoration-none"> click </a></small>
             </div>
         </form>
     </div>
