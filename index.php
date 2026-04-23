@@ -50,31 +50,65 @@
     </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-10 col-lg-8 text-start">
-                    
-                    <div class="title-bar p-3 p-md-4 mb-4" style="background-color: rgba(73, 73, 73, 0.2);">
-                        <h1 class="display-3 fw-bold text-white mb-1" style="font-size: calc(1.4rem + 1vw);">
-                            หลักสูตรศิลปศาสตรบัณฑิต<br>สาขาวิชาสารสนเทศศึกษา
-                        </h1>
-                        <h2 class="h2 fw-bold text-white mb-0" style="font-size: calc(1.1rem + 0.6vw);">
-                            Bachelor of Arts Program in Information Studies
-                        </h2>
-                    </div>
+    <header id="swuCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="2"></button>
+    </div>
 
-                    <div class="subtitle text-white ps-3 ps-md-4" style="line-height: 1;">
-                        <p class="mb-0 fs-5">คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
-                        <p class="mb-0 fs-5">Faculty of Humanities Srinakharinwirot University</p>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="hero-section slide-1">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-10 col-lg-8 text-start">
+                            <div class="title-bar p-3 p-md-4 mb-4" style="background-color: rgba(73, 73, 73, 0.2);">
+                                <h1 class="display-3 fw-bold text-white mb-1" style="font-size: calc(1.4rem + 1vw);">
+                                หลักสูตรศิลปศาสตรบัณฑิต<br>สาขาวิชาสารสนเทศศึกษา
+                                </h1>
+                                <h2 class="h2 fw-bold text-white mb-0" style="font-size: calc(1.1rem + 0.6vw);">
+                                Bachelor of Arts Program in Information Studies
+                                </h2>
+                            </div>
+                            <div class="subtitle text-white ps-3 ps-md-4" style="line-height: 1.2;">
+                                <p class="mb-0 fs-5">คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+                                <p class="mb-0 fs-5">Faculty of Humanities Srinakharinwirot University</p>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </header>
+        <div class="carousel-item">
+            <div class="hero-section slide-2">
+                <div class="container text-white text-center">
+                    <h1 class="display-4 fw-bold">ข่าวประชาสัมพันธ์</h1>
+                    <p class="fs-5">ติดตามข่าวสารและประกาศล่าสุดจากทางสาขาวิชา</p>
+                    <a href="#news" class="btn btn-light rounded-pill px-4">อ่านข่าวทั้งหมด</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="hero-section slide-3">
+                <div class="container text-white text-center">
+                    <h1 class="display-4 fw-bold">กิจกรรมสาขาวิชา</h1>
+                    <p class="fs-5">ภาพบรรยากาศกิจกรรมและการพัฒนานิสิต</p>
+                    <a href="#activities" class="btn btn-swu rounded-pill px-4">ดูกิจกรรมทั้งหมด</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev custom-control" type="button" data-bs-target="#swuCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next custom-control" type="button" data-bs-target="#swuCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</header>
     <!-- ข้อมูลหลักสูตร -->
-    <section id="showcase" class="py-5 bg-light" id="about">
+    <section id="showcase" class="py-5 bg-light anchor-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-6 mb-lg-0">
@@ -102,6 +136,7 @@
         </div>
     </section>
 
+    <!-- ประชาสัมพันธ์ -->
     <section id="news" class="bg-light py-5">
         <div class="container">
             <h2 class="fw-bold mb-4">
@@ -160,6 +195,7 @@
         </div>
     </section>
 
+    <!-- กิจกรรม -->
     <section id="news" class="bg-light py-5">
         <div class="container">
             <h2 class="fw-bold mb-4">
