@@ -23,7 +23,7 @@ $sql = "SELECT student_id, fullname, email, year_level, major FROM students";
 if ($search != "") {
     $safe_search = $conn->real_escape_string($search);
     
-    // เอาเฉพาะตัวเลขสำหรับค้นหาชั้นปี
+    // เฉพาะตัวเลขสำหรับค้นหาชั้นปี
     $number_only = preg_replace('/[^0-9]/', '', $search);
 
     // เริ่มเงื่อนไข WHERE และต้องใช้ single quote (') ครอบ $safe_search ให้ถูกจุด
