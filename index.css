@@ -39,7 +39,7 @@ body {
                 url('https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/509939200_1391707805412775_6337660339211142142_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=LsVgTa6hMX8Q7kNvwGO6uUp&_nc_oc=AdqP9qJUAsdKULFJRXy75WiehWh61Yp_XVsCQl8EgtrDWd-ILJ_7Gh2nC2IdmSAa9nlqy25py5ppAgEs-UIGNTNz&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&_nc_gid=XhyEEMg2BrLXY3xU_HG37g&oh=00_Af1bl-ogLteK16Fs8ZIOrUrSaE38V3_Q3wPJOQLFjYN5zg&oe=69EFAF7D');
     background-size: cover;
     background-position: center;
-    padding: 150px 0;
+    padding: 200px 0;
     text-align: center;
 }
 
@@ -50,7 +50,7 @@ body {
     background-size: cover;
     background-position: center;
     color: white; 
-    padding: 150px 0;
+    padding: 200px 0;
     text-align: center;
 }
 
@@ -94,6 +94,12 @@ body {
 /* สลับด้านลูกศรขวาให้หนาเท่ากัน */
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath stroke='%23fff' stroke-width='1.5' stroke-linecap='round' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+/* ขนาดตัวอักษร หลักสูตร */
+.course-info-text {
+    font-size: 1.2rem; /* ปรับตัวเลขนี้ได้ตามต้องการ เช่น 1.1rem, 1.3rem */
+    line-height: 1.8;  /* เพิ่มระยะห่างระหว่างบรรทัดเพื่อให้ดูสบายตาขึ้น */
 }
 
 /* --- ปุ่มสีแดง มศว --- */
