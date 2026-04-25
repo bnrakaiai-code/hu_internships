@@ -90,12 +90,6 @@
                          <span>IS_SWU</span>
                     </a>
                </li>
-               <li class="mb-2">
-                    <a href="mailto:is@g.swu.ac.th" class="text-decoration-none text-dark d-flex align-items-center">
-                         <i class="bi bi-envelope-fill fs-4 me-3" style="color: #931e1e;"></i> 
-                         <span>is@g.swu.ac.th</span>
-                    </a>
-               </li>
           </ul>
           </div>
      </div>
