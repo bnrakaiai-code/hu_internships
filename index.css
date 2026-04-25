@@ -129,6 +129,15 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
+.card-activities {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-activities:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
 /* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */
 .transition-hover {
     transition: opacity 0.3s, transform 0.3s, color 0.3s;

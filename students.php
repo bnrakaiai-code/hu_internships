@@ -89,6 +89,7 @@ $result = $conn->query($sql);
                             <li><a class="dropdown-menu-item nav-link text-dark px-3 fw-bold" href="students.php">สมุดรายชื่อนิสิต</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="http://localhost/hu_internships/contact.php">ติดต่อเรา</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                         <a class="btn btn-danger rounded-pill" href="login.php" style="background-color: #931e1e; padding: 8px 25px;">เข้าสู่ระบบ</a>
                     </li>

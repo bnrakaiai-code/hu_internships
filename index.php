@@ -42,13 +42,7 @@
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link active" href="#">หน้าแรก</a></li>
                 <li class="nav-item"><a class="nav-link" href="#showcase">หลักสูตร</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ประชาสัมพันธ์</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#news">ประชาสัมพันธ์</a></li>
-                        <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#activities">กิจกรรม</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#news">ประชาสัมพันธ์</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">บุคลากร</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -57,6 +51,7 @@
                         <li><a class="dropdown-menu-item nav-link text-dark px-3" href="students.php">สมุดรายชื่อนิสิต</a></li>
                     </ul>
                 </li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">ติดต่อเรา</a></li>
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                     <a class="btn btn-swu rounded-pill" href="login.php" style="padding: 8px 25px;">เข้าสู่ระบบ</a>
                 </li>
@@ -143,10 +138,11 @@
                         ชื่อย่อ : B.A. (Information Studies)</p>
                     <a class="btn btn-swu rounded-pill" href="http://localhost/hu_internships/about.php" style="padding: 8px 25px;">Read More</a>
                 </div>
-                <div class="col-lg-4 offset-lg-1">
+                <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden">
                     <div class="row g-4">
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Students studying" class="img-fluid rounded-4 shadow-sm mb-4">
                     </div>
+                    
                 </div>
             </div>
         </div>
