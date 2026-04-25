@@ -152,8 +152,7 @@ try {
                                 <th width="5%">#</th>
                                 <th width="10%">รหัสนิสิต</th>
                                 <th width="15%">ชื่อ-นามสกุล</th>
-                                <th width="15%">บริษัท</th>
-                                <th width="15%">ตำแหน่งงาน</th> 
+                                <th width="15%">รายละเอียดข้อมูล</th> 
                                 <th width="10%">วันที่ยื่น</th>
                                 <th width="15%">สถานะ</th>
                                 <th width="15%">จัดการ</th>
@@ -166,8 +165,9 @@ try {
                                 <td><?php echo $req['request_id']; ?></td>
                                 <td><?php echo htmlspecialchars($req['student_id']); ?></td>
                                 <td><?php echo htmlspecialchars($req['fullname']); ?></td>
-                                <td><?php echo htmlspecialchars($req['company_name']); ?></td>
-                                <td class="fw-bold"><?php echo htmlspecialchars($req['position_title'] ?? '-'); ?></td>
+                                <td>
+                                    <a href="view_detail.php?id=<?= $req['request_id'] ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3"> ดูรายละเอียด </a>
+                                </td>
                                 <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
                                 <td>
                                     <?php 
@@ -197,7 +197,7 @@ try {
                             <?php endforeach; ?>
                             <?php else: ?>
                                 <tr>
-                                    <td colspan="8" class="text-center py-5 text-muted">ไม่พบข้อมูลที่ค้นหา</td>
+                                    <td colspan="7" class="text-center py-5 text-muted">ไม่พบข้อมูลที่ค้นหา</td>
                                 </tr>
                             <?php endif; ?>
                         </tbody>

@@ -48,13 +48,47 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f4f7f6; }
-        .detail-card { border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
-        .card-header-swu { background: #931e1e; color: white; padding: 2rem; border: none; }
-        .section-title { color: #931e1e; border-left: 5px solid #931e1e; padding-left: 15px; margin-bottom: 20px; font-weight: 600; margin-top: 30px; }
-        .info-label { color: #888; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
-        .info-value { color: #333; font-size: 1.1rem; margin-bottom: 1.2rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
-        .status-badge { padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 600; }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f4f7f6; 
+        }
+        .detail-card { 
+            border: none; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+        }
+        .card-header-swu { 
+            background: #931e1e; 
+            color: white; 
+            padding: 2rem; 
+            border: none; 
+        }
+        .section-title { 
+            color: #931e1e; 
+            border-left: 5px solid #931e1e; 
+            padding-left: 15px; 
+            margin-bottom: 20px; 
+            font-weight: 600; 
+            margin-top: 30px; 
+        }
+        .info-label { 
+            color: #888; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            text-transform: uppercase; }
+        .info-value { 
+            color: #333; 
+            font-size: 1.1rem; 
+            margin-bottom: 1.2rem; 
+            border-bottom: 1px solid #f0f0f0; 
+            padding-bottom: 5px; 
+        }
+        .status-badge { 
+            padding: 0.5rem 1.5rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+        }
     </style>
 </head>
 <body>
