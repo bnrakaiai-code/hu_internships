@@ -33,7 +33,6 @@ if ($search !== '') {
 
 $stmt->execute();
 $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// --- จบส่วนการดึงข้อมูล ---
 ?>
 
 <!DOCTYPE html>

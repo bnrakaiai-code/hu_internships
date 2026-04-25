@@ -11,8 +11,8 @@ $pending_requests = [];
 
 try {
     $count_all = $conn->query("SELECT COUNT(*) FROM internship_requests")->fetchColumn();
+    $count_student = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id in (1,2,3,4)")->fetchColumn();
     $count_teacher = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id = 1")->fetchColumn();
-    $count_staff = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id = 4")->fetchColumn();
     $count_approved = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id = 2")->fetchColumn();
 
     $stmt_pending = $conn->prepare("
@@ -134,7 +134,7 @@ try {
                 <div class="col-12 col-sm-6 col-xl-4">
                     <div class="card card-custom p-4 bg-white border-start border-primary border-5 h-100">
                         <h6 class="text-muted small">คำยื่นขอฝึกงานของนิสิต</h6>
-                        <h2 class="fw-bold mb-0 text-primary"><?php echo $count_staff; ?> <small class="fs-6 text-muted">รายการ</small></h2>
+                        <h2 class="fw-bold mb-0 text-primary"><?php echo $count_student; ?> <small class="fs-6 text-muted">รายการ</small></h2>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-xl-4">

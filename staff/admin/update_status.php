@@ -2,7 +2,7 @@
 session_start();
 include('../../includes/db_connect.php');
 
-// 1. ตรวจสอบสิทธิ์ Admin/Staff
+// 1. ตรวจสอบสิทธิ์ Staff/Admin
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'staff' && $_SESSION['role'] !== 'admin')) {
     header("Location: ../../login.php");
     exit();
