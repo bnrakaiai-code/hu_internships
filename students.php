@@ -16,17 +16,18 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8");
 
 // รับค่าคำค้นหาจาก Form
-$search = isset($_GET['search']) ? $_GET['search'] : '';
-// 1. ต้องกำหนดค่าเริ่มต้นให้ $sql ก่อนเสมอ (ห้ามลืมบรรทัดนี้!)
-$sql = "SELECT student_id, fullname, email, year_level, major FROM students";
+$search = isset($_GET['search']) ? trim($_GET['search']) : '';
+$result = null;
 
+// ตรวจสอบว่ามีการพิมพ์คำค้นหามาหรือไม่
 if ($search != "") {
+    $sql = "SELECT student_id, fullname, email, year_level, major FROM students";
     $safe_search = $conn->real_escape_string($search);
     
     // เฉพาะตัวเลขสำหรับค้นหาชั้นปี
     $number_only = preg_replace('/[^0-9]/', '', $search);
 
-    // เริ่มเงื่อนไข WHERE และต้องใช้ single quote (') ครอบ $safe_search ให้ถูกจุด
+    // เริ่มเงื่อนไข WHERE
     $sql .= " WHERE (fullname LIKE '%$safe_search%' 
               OR student_id LIKE '%$safe_search%' 
               OR email LIKE '%$safe_search%' 
@@ -38,9 +39,10 @@ if ($search != "") {
     }
     
     $sql .= ")"; // ปิดวงเล็บเงื่อนไข
+    
+    // ทำการ Query ข้อมูลเมื่อมีการค้นหาเท่านั้น
+    $result = $conn->query($sql);
 }
-
-$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -128,8 +130,12 @@ $result = $conn->query($sql);
             </form>
         </div>
 
+        <?php 
+        // เงื่อนไข: แสดงกล่องตารางก็ต่อเมื่อมีการค้นหา ($search ไม่ใช่ค่าว่าง)
+        if ($search != "") { 
+        ?>
         <div class="bg-white p-4 rounded shadow-sm border">
-            <h5 class="mb-4"><i class="bi bi-mortarboard-fill me-2"></i> นิสิต</h5>
+            <h5 class="mb-4"><i class="bi bi-mortarboard-fill me-2"></i> ผลการค้นหา: นิสิต</h5>
             <div class="table-responsive">
                 <table class="table table-hover align-middle table-custom">
                     <thead class="border-bottom border-2">
@@ -149,17 +155,15 @@ $result = $conn->query($sql);
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr>";
                                 echo "<td class='text-center text-muted'>" . $i++ . "</td>";
-                                // แก้ชื่อ index ให้ตรงกับฐานข้อมูล: fullname
                                 echo "<td class='fw-bold text-dark'>" . htmlspecialchars($row['fullname']) . "</td>";
                                 echo "<td class='fw-bold' style='color: #6f42c1;'>" . htmlspecialchars($row['student_id']) . "</td>";
                                 echo "<td class='text-dark'>" . htmlspecialchars($row['email']) . "</td>";
-                                // เพิ่มการแสดงผลสาขาวิชา: major
                                 echo "<td class='text-muted'>" . htmlspecialchars($row['major']) . "</td>";
-                                // แก้ชื่อ index ให้ตรงกับฐานข้อมูล: year_level
                                 echo "<td class='text-muted'>ปี " . htmlspecialchars($row['year_level']) . "</td>";
                                 echo "</tr>";
                             }
                         } else {
+                            // กรณีที่ค้นหาแล้วไม่พบข้อมูล
                             echo "<tr><td colspan='6' class='text-center py-5 text-muted'>ไม่พบข้อมูลนิสิตที่ค้นหา</td></tr>";
                         }
                         ?>
@@ -167,6 +171,10 @@ $result = $conn->query($sql);
                 </table>
             </div>
         </div>
+        <?php 
+        } // ปิดเงื่อนไข if ($search != "")
+        ?>
+
     </main>
 
     <footer class="py-5 text-white" style="background-color: #931e1e;">
