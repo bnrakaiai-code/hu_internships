@@ -26,7 +26,7 @@ try {
         $sql .= " AND (st.fullname LIKE :search OR st.student_id LIKE :search OR c.company_name LIKE :search)";
     }
 
-    $sql .= " ORDER BY r.request_date DESC";
+    $sql .= " ORDER BY r.request_id ASC";
     
     $stmt = $conn->prepare($sql);
 
