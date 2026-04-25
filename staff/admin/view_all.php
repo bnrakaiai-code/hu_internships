@@ -8,10 +8,10 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'staff' && $_SESSION[
     exit();
 }
 
-$requests = []; // ประกาศตัวแปรเป็นอาเรย์ว่างไว้ก่อนกัน Error
+$requests = []; 
 
 try {
-    // 2. ดึงข้อมูลคำร้องทั้งหมด (ยกเว้นสถานะ 1 ที่ยังอยู่กับอาจารย์)
+    // 2. ดึงข้อมูล (SQL เดิมใช้ r.* ซึ่งมี position_title อยู่แล้ว)
     $sql = "SELECT r.*, s.status_name, c.company_name, st.fullname 
             FROM internship_requests r
             JOIN status_list s ON r.status_id = s.status_id
@@ -24,9 +24,7 @@ try {
     $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {
-    // กรณี Query ผิดพลาด (เช่น ชื่อคอลัมน์ผิด) ให้ตั้งเป็นอาเรย์ว่างไว้
     $requests = [];
-    // echo "Error: " . $e->getMessage(); // เปิดบรรทัดนี้ไว้เช็คถ้าข้อมูลไม่มา
 }
 ?>
 
@@ -34,88 +32,89 @@ try {
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>รายการคำร้องทั้งหมด | IS SWU</title>
+    <title>จัดการคำร้องทั้งหมด | IS SWU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { 
-            font-family: 'Prompt', sans-serif; 
-            background-color: #f4f7f6; 
-        }
-        .table-container { 
-            background: white; 
-            border-radius: 15px; 
-            padding: 20px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-        }
+        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .table thead { background-color: #931e1e; color: white; }
     </style>
 </head>
 <body>
 
-<div class="container-fluid py-5 px-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="fw-bold"><i class="bi bi-file-earmark-text text-danger me-2"></i> จัดการคำร้องนิสิต</h3>
-        <a href="index.php" class="btn btn-secondary rounded-pill px-4">กลับหน้าหลัก</a>
-    </div>
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold mb-0 text-dark">รายการคำร้องขอฝึกงาน (Admin)</h4>
+                    <a href="index.php" class="btn btn-outline-secondary btn-sm">กลับหน้า Dashboard</a>
+                </div>
 
-    <div class="table-container">
-        <div class="table-responsive">
-            <table class="table table-hover align-middle">
-                <thead class="table-light">
-                    <tr>
-                        <th>รหัสนิสิต</th>
-                        <th>ชื่อ-นามสกุล</th>
-                        <th>บริษัทที่ขอฝึก</th>
-                        <th>ตำแหน่ง</th>
-                        <th>วันที่ยื่น</th>
-                        <th>สถานะ</th>
-                        <th class="text-center">ดำเนินการ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (is_array($requests) && count($requests) > 0): ?>
-                        <?php foreach ($requests as $req): ?>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
                             <tr>
+                                <th width="5%">#</th>
+                                <th width="10%">รหัสนิสิต</th>
+                                <th width="15%">ชื่อ-นามสกุล</th>
+                                <th width="15%">บริษัท</th>
+                                <th width="15%">ตำแหน่งงาน</th> <th width="10%">วันที่ยื่น</th>
+                                <th width="15%">สถานะ</th>
+                                <th width="15%">จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($requests)): ?>
+                            <?php foreach ($requests as $req): ?>
+                            <tr>
+                                <td><?php echo $req['request_id']; ?></td>
                                 <td><?php echo htmlspecialchars($req['student_id']); ?></td>
                                 <td><?php echo htmlspecialchars($req['fullname']); ?></td>
                                 <td><?php echo htmlspecialchars($req['company_name']); ?></td>
-                                <td>
-                                    <?php echo date('d/m/Y', strtotime($req['create_at'])); ?>
+                                <td class="fw-bold text-primary">
+                                    <?php echo htmlspecialchars($req['position_title'] ?? '-'); ?>
                                 </td>
+                                <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
                                 <td>
-                                    <span class="badge bg-info text-dark">
-                                        <?php echo htmlspecialchars($req['status_name']); ?>
+                                    <?php 
+                                        $badge_class = "bg-secondary";
+                                        if($req['status_id'] == 2) $badge_class = "bg-info text-dark";
+                                        if($req['status_id'] == 3) $badge_class = "bg-success";
+                                        if($req['status_id'] == 9) $badge_class = "bg-danger";
+                                    ?>
+                                    <span class="badge rounded-pill <?php echo $badge_class; ?> px-3 py-2">
+                                        <?php echo $req['status_name']; ?>
                                     </span>
                                 </td>
                                 <td>
-                                    <form action="update_status.php" method="POST" class="d-flex gap-2">
+                                    <form action="update_status.php" method="POST" class="d-flex gap-1">
                                         <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
-    
                                         <select name="status_id" class="form-select form-select-sm">
-                                            <option value="<?php echo $req['status_id']; ?>" selected>--- แก้ไขสถานะ ---</option>
-        
-                                            <option value="2"> อาจารย์ที่ปรึกษาอนุมัติ (ปัจจุบัน)</option>
-                                            <option value="3"> ส่งหนังสือส่งตัวแล้ว</option>
-                                            <option value="4"> เสร็จสิ้นการฝึกงาน</option>
-                                            <option value="9"> ไม่ผ่านการอนุมัติ/ยกเลิก</option>
+                                            <option value="">-- แก้ไข --</option>
+                                            <option value="3" <?php if($req['status_id']==3) echo 'selected'; ?>>ส่งหนังสือส่งตัวแล้ว</option>
+                                            <option value="4" <?php if($req['status_id']==4) echo 'selected'; ?>>เสร็จสิ้นการฝึกงาน</option>
+                                            <option value="9" <?php if($req['status_id']==9) echo 'selected'; ?>>ยกเลิก</option>
                                         </select>
-    
                                         <button type="submit" class="btn btn-primary btn-sm">บันทึก</button>
                                     </form>
                                 </td>
-                                <tr>
-                                    <?php endforeach; ?>
-                                    <?php else: ?>
-                                <tr>
-                                    <td colspan="6" class="text-center py-4">ไม่พบข้อมูลคำร้อง</td>
-                                </tr>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                            <tr>
+                                <td colspan="8" class="text-center py-5 text-muted">ไม่พบข้อมูลคำร้อง</td>
+                            </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -56,6 +56,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
             padding-left: 15px; 
             margin-bottom: 25px; 
             font-weight: 600; 
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -68,9 +69,9 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
             <p class="mb-0 opacity-75 mt-2">กรุณากรอกข้อมูลให้ครบถ้วนเพื่อดำเนินการออกหนังสือขอความอนุเคราะห์</p>
         </div>
         <div class="card-body p-4 p-md-5">
-            <form action="save_request.php" method="POST">
+            <form action="save_request.php" method="POST" enctype="multipart/form-data">
                 
-                <h5 class="section-title">ข้อมูลผู้ยื่นคำร้อง</h5>
+                <h5 class="section-title" style="margin-top: 0;">ข้อมูลผู้ยื่นคำร้อง</h5>
                 <div class="row mb-4">
                     <div class="col-md-6 mb-3">
                         <label class="form-label fw-bold text-muted">รหัสนิสิต</label>
@@ -122,7 +123,17 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
                     </div>
                 </div>
 
-                <div class="d-flex gap-2 justify-content-center mt-4">
+                <h5 class="section-title">เอกสารแนบ</h5>
+                <div class="mb-4">
+                    <label class="form-label fw-bold">แนบไฟล์แบบฟอร์มขอฝึกงาน <span class="text-danger">*</span></label>
+                    <p class="mb-0 opacity-75 mt-2">ตั้งชื่อไฟล์เป็นรหัสนิสิตเท่านั้น</p>
+                    <input type="file" name="request_document" class="form-control" accept=".pdf,.doc,.docx" required>
+                    <div class="form-text text-muted mt-2">
+                        <i class="bi bi-info-circle me-1"></i> รองรับไฟล์นามสกุล .pdf, .doc, .docx เท่านั้น
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 justify-content-center mt-5">
                     <button type="submit" class="btn btn-swu shadow-sm">
                         <i class="bi bi-send-check me-2"></i> ส่งคำร้องขอฝึกงาน
                     </button>

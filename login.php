@@ -72,7 +72,12 @@ unset($_SESSION['error']);
                 <i class="bi bi-box-arrow-in-right me-2"></i> เข้าสู่ระบบ
             </button>
             <div class="text-center">
-                <small>กลับหน้าหลัก <a href="index.php" class="text-decoration-none"> click </a></small>
+                <small> ยังไม่มีบัญชี? <a href="students/register.php" class="text-decoration-none"> สร้างบัญชีใหม่ </a></small>
+            </div>
+            <div class="text-center border-top pt-3 mt-3">
+                <a href="index.php" class="btn btn-link btn-sm text-muted text-decoration-none">
+                    <i class="bi bi-house-door me-1"></i> กลับสู่หน้าหลัก
+                </a>
             </div>
         </form>
     </div>
