@@ -167,7 +167,7 @@
                             <h5 class="card-title fw-bold">ขอแสดงความยินดีและร่วมเผยแพร่ผลงานวิจัยระดับนานาชาติ</h5>
                             <p class="card-text text-muted">ผลงานวิจัยจากคณาจารย์หลักสูตร ศศ.ม. สารสนเทศศึกษา กลุ่มสาขาวิชาพัฒนาศักยภาพมนุษย์ ได้รับการตีพิมพ์ในฐานข้อมูลระดับนานาชาติ (SCOPUS)
                                 บทความเรื่อง: “Information Services of Bangkok Metropolitan Administration's Discovery Learning Libraries: Roles and Potential in Driving the Sustainable Development Goals (SDGs)”</p>
-                            <a href="https://www.facebook.com/share/p/1AZtfxuYSV/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/1AZtfxuYSV/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                             <h5 class="card-title fw-bold">กิจกรรมการประเมินคุณภาพการศึกษาภายในระดับหลักสูตร</h5>
                             <p class="card-text text-muted">คณะมนุษยศาสตร์จัดกิจกรรมการประเมินคุณภาพการศึกษาภายในระดับหลักสูตร ตามเกณฑ์ AUN-QA ในรูปแบบ Individual ของหลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา 
                                 ระหว่างวันที่ 24-25 มิถุนายน 2568 โดยในวันที่ 24 มิถุนายน 2568 กิจกรรมจัดขึ้น ณ ห้องประชุมชั้น 4 อาคาร 38 เเละ วันที่ 25 มิถุนายน 2568 รูปแบบออนไลน์</p>
-                            <a href="https://www.facebook.com/share/p/14a3e3hLrZP/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/14a3e3hLrZP/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                             <h5 class="card-title fw-bold">ได้รับการแต่งตั้งให้ดำรงตำแหน่ง 'ผู้ช่วยศาสตราจารย์ สาขาวิชาสารสนเทศศึกษา'</h5>
                             <p class="card-text text-muted">ขอเเสดงความยินดีแก่ "ผู้ช่วยศาสตราจารย์ ดร.วิภากร  วัฒนสินธุ์" ที่ได้รับการแต่งตั้งให้ดำรงตำแหน่ง 'ผู้ช่วยศาสตราจารย์ สาขาวิชาสารสนเทศศึกษา'
                                 ตามมติสภามหาวิทยาลัยศรีนครินทรวิโรฒ ครั้งที่ 7/2568 เมื่อวันที่ 10 มิถุนายน 2568</p>
-                            <a href="https://www.facebook.com/share/p/1J1cmqsnJ7/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/1J1cmqsnJ7/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -226,7 +226,7 @@
                             <h5 class="card-title fw-bold">Cyber Guardians & Digital Art Challenge  (ครั้งที่ 2)</h5>
                             <p class="card-text text-muted">นิสิตชั้นปีที่ 4 สาขาวิชาสารสนเทศศึกษา คว้ารางวัล ชมเชยอันดับ 1 จากการแข่งขัน Cyber Guardians & Digital Art Challenge ครั้งที่ 2 (23 กุมภาพันธ์ 2569) 
                                 จัดโดยกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม (MDES) เพื่อส่งเสริมความตระหนักรู้ด้านภัยออนไลน์และทักษะการใช้ AI สร้างสรรค์นวัตกรรมดิจิทัล</p>
-                            <a href="https://www.facebook.com/share/p/1BAda68hpM/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/1BAda68hpM/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                             <h5 class="card-title fw-bold">นิสิตสารสนเทศศึกษา เยี่ยมชมห้องสมุดเพื่อการเรียนรู้ห้วยขวาง</h5>
                             <p class="card-text text-muted">อาจารย์ประจำวิชา IS101 Information Resource Development (B02) หลักสูตรสารสนเทศศึกษา ได้พานิสิตภาคพิเศษ ชั้นปีที่ 1 
                                 เข้าเยี่ยมชม ศึกษาดูงาน ฟังบรรยายเกี่ยวกับกระบวนการพัฒนาทรัพยากรสารสนเทศ และทำกิจกรรมส่งเสริมการอ่าน ณ ห้องสมุดเพื่อการเรียนรู้ห้วยขวาง</p>
-                            <a href="https://www.facebook.com/share/p/1G16HYdNs4/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/1G16HYdNs4/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                             <h5 class="card-title fw-bold">โครงการ "พัฒนาแหล่งเรียนรู้สู่ชุมชน"</h5>
                             <p class="card-text text-muted">หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา ได้จัดโครงการพัฒนาแหล่งเรียนรู้สู่ชุมชน ณ โรงเรียนวัดวังปลาจีด จ.นครนายก และโรงเรียนวัดท่าช้าง (แสงปัญญาวิทยาคาร) จ.นครนายก 
                                 เพื่อให้นิสิตได้บูรณาการวิชาชีพสารสนเทศ กับการจัดแหล่งเรียนรู้ ที่มีประโยชน์ตรงตามความต้องการของชุมชน และมีทักษะทางปัญญา ทักษะชีวิต และทักษะวิชาชีพเพิ่มขึ้น</p>
-                            <a href="https://www.facebook.com/share/p/1Gtwbui7uD/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="https://www.facebook.com/share/p/1Gtwbui7uD/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
