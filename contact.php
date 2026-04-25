@@ -64,7 +64,7 @@
                <h4 class="fw-bold text-swu mb-4"><i class="bi bi-geo-alt-fill"></i> ข้อมูลการติดต่อ</h4>
                <ul class="list-unstyled">
                     <li class="mb-3"><strong>ที่อยู่:</strong><br> 114 ซอยสุขุมวิท 23 แขวงคลองเตยเหนือ เขตวัฒนา กรุงเทพฯ 10110</li>
-                    <li class="mb-3"><strong>โทรศัพท์:</strong> 02 649-5000</li>
+                    <li class="mb-3"><strong>โทรศัพท์:</strong> 02-649-5000</li>
                     <li class="mb-3"><strong>อีเมล:</strong> <a href="mailto:is@g.swu.ac.th" class="text-swu text-decoration-none">is@g.swu.ac.th</a></li>
                </ul>
 
