@@ -42,7 +42,13 @@
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link active" href="#">หน้าแรก</a></li>
                 <li class="nav-item"><a class="nav-link" href="#showcase">หลักสูตร</a></li>
-                <li class="nav-item"><a class="nav-link" href="#news">ประชาสัมพันธ์</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">ประชาสัมพันธ์</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#news">ประชาสัมพันธ์</a></li>
+                        <li><a class="dropdown-menu-item nav-link text-dark px-3" href="#activities">กิจกรรม</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">บุคลากร</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,7 +64,7 @@
         </div>
     </div>
     </nav>
-
+    
     <header id="swuCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="0" class="active"></button>
@@ -115,14 +121,15 @@
     <button class="carousel-control-next custom-control" type="button" data-bs-target="#swuCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
     </button>
-</header>
+    </header>
+
     <!-- ข้อมูลหลักสูตร -->
     <section id="showcase" class="py-5 bg-light anchor-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-6 mb-lg-0">
                     <h2 class="font-serif text-swu-red fw-bold mb-4">ข้อมูลหลักสูตร</h2>
-                    <p class="text-muted mb-4 line-height-lg">
+                    <p class="text-muted mb-4 line-height-lg course-info-text">
                         รหัสและชื่อหลักสูตร <br>
                         รหัสหลักสูตร 25520091104002 <br>
                         ภาษาไทย : หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา <br>
@@ -205,15 +212,15 @@
     </section>
 
     <!-- กิจกรรม -->
-    <section id="news" class="bg-light py-5">
+    <section id="activities" class="bg-light py-5">
         <div class="container">
             <h2 class="fw-bold mb-4">
                 <span style="border-bottom: 2px solid #bb1c1a; padding-bottom: 2px;">กิจกรรม</span>
             </h2>
             <div class="row">
-                <!-- News Item 1 -->
+                <!-- activities Item 1 -->
                 <div class="col-md-4">
-                    <div class="card card-news h-100 p-3">
+                    <div class="card card-activities h-100 p-3">
                         <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t39.30808-6/655661822_1613297087049223_2758694381761646677_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=y2z0_yHIu7AQ7kNvwH6aEpa&_nc_oc=AdoiuIMoONr1uab2ojIErTS8uYYnzVmP2SBQclRNtyTqQLVSRqZM6w5jcd0PJP9W2Ts&_nc_zt=23&_nc_ht=scontent.fbkk5-1.fna&_nc_gid=JixGEuTLx_icV1cmHJI9KQ&_nc_ss=7a389&oh=00_Af26QoMOeHs4maau-iGMBC3GOfp1xq2IAVDX39ifknJpqg&oe=69ED39AC" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
@@ -227,9 +234,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- News Item 2 -->
+                <!-- activities Item 2 -->
                 <div class="col-md-4">
-                    <div class="card card-news h-100 p-3">
+                    <div class="card card-activities h-100 p-3">
                         <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/493042177_1322665172779084_2061443328447931420_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=wXHcbs1s3QEQ7kNvwG9qfG0&_nc_oc=AdoHDC0SlYt5v4gK9wlnsJJa5QOXcvO_4t9cCR3Vu21NV2d6ctwftbResBDG7ZA4APg&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=rHoHlz_7epkgNXBzlb8vkA&oh=00_Af39i4aO24H0nkmZMp-joxAw5gVyc_0PKItBWrQvpDjgzw&oe=69F014E5" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
@@ -243,9 +250,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- News Item 3 -->
+                <!-- activities Item 3 -->
                 <div class="col-md-4">
-                    <div class="card card-news h-100 p-3">
+                    <div class="card card-activities h-100 p-3">
                         <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t39.30808-6/523032281_1416069249643297_3662674924218715301_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=TFPY5mF--e0Q7kNvwG_KTLx&_nc_oc=Adrq7MdGPd2U40iitdiuTXTaebPQ8Hf5aVsmPwUQKr8EKu6eNRorX0C0tVf1J_h7cKQ&_nc_zt=23&_nc_ht=scontent.fbkk5-5.fna&_nc_gid=7b1MjBhQZTSCvvv-fnwqtw&oh=00_Af2AB8ljNk0eDbVTTmjOnTZM4ZqR0mGVOUI6eqeWJFAC3w&oe=69F01EEA" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
