@@ -74,16 +74,15 @@ try {
                                 <td><?php echo htmlspecialchars($req['student_id']); ?></td>
                                 <td><?php echo htmlspecialchars($req['fullname']); ?></td>
                                 <td><?php echo htmlspecialchars($req['company_name']); ?></td>
-                                <td class="fw-bold text-primary">
-                                    <?php echo htmlspecialchars($req['position_title'] ?? '-'); ?>
-                                </td>
+                                <td class="fw-bold"><?php echo htmlspecialchars($req['position_title'] ?? '-'); ?></td>
                                 <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
                                 <td>
                                     <?php 
-                                        $badge_class = "bg-secondary";
-                                        if($req['status_id'] == 2) $badge_class = "bg-info text-dark";
-                                        if($req['status_id'] == 3) $badge_class = "bg-success";
-                                        if($req['status_id'] == 9) $badge_class = "bg-danger";
+                                        $badge_class = "bg-secondary"; // สีเริ่มต้น (เทา)
+                                        if($req['status_id'] == 2) $badge_class = "bg-info text-dark"; // อาจารย์อนุมัติ
+                                        if($req['status_id'] == 3) $badge_class = "bg-success";        // ออกหนังสือแล้ว
+                                        if($req['status_id'] == 4) $badge_class = "bg-primary";        // เสร็จสิ้น
+                                        if($req['status_id'] == 9) $badge_class = "bg-danger";         // ยกเลิก
                                     ?>
                                     <span class="badge rounded-pill <?php echo $badge_class; ?> px-3 py-2">
                                         <?php echo $req['status_name']; ?>
@@ -92,9 +91,9 @@ try {
                                 <td>
                                     <form action="update_status.php" method="POST" class="d-flex gap-1">
                                         <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
-                                        <select name="status_id" class="form-select form-select-sm">
+                                        <select name="status_id" class="form-select form-select-sm" required>
                                             <option value="">-- แก้ไข --</option>
-                                            <option value="3" <?php if($req['status_id']==3) echo 'selected'; ?>>ส่งหนังสือส่งตัวแล้ว</option>
+                                            <option value="3" <?php if($req['status_id']==3) echo 'selected'; ?>>ออกหนังสือส่งตัวแล้ว</option>
                                             <option value="4" <?php if($req['status_id']==4) echo 'selected'; ?>>เสร็จสิ้นการฝึกงาน</option>
                                             <option value="9" <?php if($req['status_id']==9) echo 'selected'; ?>>ยกเลิก</option>
                                         </select>
@@ -104,9 +103,6 @@ try {
                             </tr>
                             <?php endforeach; ?>
                             <?php else: ?>
-                            <tr>
-                                <td colspan="8" class="text-center py-5 text-muted">ไม่พบข้อมูลคำร้อง</td>
-                            </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>

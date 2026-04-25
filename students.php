@@ -54,9 +54,19 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./index.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
-        .table-custom th { background-color: #fdfdfd; font-weight: 600; color: #555; }
-        .search-box { max-width: 800px; margin: 0 auto; }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f8f9fa; 
+        }
+        .table-custom th { 
+            background-color: #fdfdfd; 
+            font-weight: 600; 
+            color: #555; 
+        }
+        .search-box { 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
     </style>
 </head>
 <body>

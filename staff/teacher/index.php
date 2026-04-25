@@ -11,6 +11,10 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSIO
 $stmt = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id = 1");
 $pending_count = $stmt->fetchColumn();
 
+// นับจำนวนคำร้องที่ "อนุมัติเรียบร้อย" (status_id = 2,3,4) ---
+$stmt_approved = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE status_id IN (2, 3, 4)");
+$approved_count = $stmt_approved->fetchColumn();
+
 // ดึงข้อมูลคำร้องที่ "รออาจารย์ตรวจสอบ" (status_id = 1)
 $stmt_requests = $conn->query("SELECT * FROM internship_requests WHERE status_id = 1 ORDER BY request_date DESC");
 $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
@@ -26,20 +30,55 @@ $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
-        .sidebar { background: #931e1e; min-height: 100vh; color: white; position: sticky; top: 0; }
-        .nav-link { color: rgba(255,255,255,0.8); margin-bottom: 10px; border-radius: 10px; transition: 0.3s; }
-        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
-        .card-custom { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .welcome-section { background: white; padding: 25px; border-radius: 15px; border-left: 5px solid #931e1e; }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f8f9fa; 
+        }
+        .sidebar { 
+            background: #931e1e; 
+            min-height: 100vh; 
+            color: white; 
+            position: sticky; 
+            top: 0; 
+        }
+        .nav-link { 
+            color: rgba(255,255,255,0.8); 
+            margin-bottom: 10px; 
+            border-radius: 10px; 
+            transition: 0.3s; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: white; 
+            background: rgba(255,255,255,0.1); 
+        }
+        .card-custom { 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+        }
+        .welcome-section { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            border-left: 5px solid #931e1e; 
+        }
         
-        /* ปรับปรุงสถานะปุ่มให้น่ากดขึ้น */
-        .btn-success { background-color: #198754; border: none; }
-        .btn-danger { background-color: #dc3545; border: none; }
+        .btn-success { 
+            background-color: #198754; 
+            border: none; 
+        }
+        .btn-danger { 
+            background-color: #dc3545; 
+            border: none; 
+        }
 
         @media (max-width: 767.98px) {
-            .sidebar { display: none; }
-            .welcome-section { text-align: center; }
+            .sidebar { 
+                display: none; 
+            }
+            .welcome-section { 
+                text-align: center; 
+            }
         }
     </style>
 </head>
@@ -101,8 +140,17 @@ $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
                         <div class="d-flex align-items-center">
                             <div class="fs-1 me-3"><i class="bi bi-hourglass-split"></i></div>
                             <div>
-                                <h6 class="fw-bold mb-1">คำร้องรอตรวจสอบ</h6>
+                                <h6 class="fw-bold mb-1">คำร้องขอฝึกงานที่รอตรวจสอบ</h6>
                                 <h2 class="fw-bold mb-0"><?= $pending_count ?> <small class="fs-6">รายการ</small></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card card-custom bg-success text-white p-4 border-0"> <div class="d-flex align-items-center">
+                            <div class="fs-1 me-3"><i class="bi bi-check-circle"></i></div> <div>
+                                <h6 class="fw-bold mb-1">อนุมัติเรียบร้อย</h6>
+                                <h2 class="fw-bold mb-0"><?= $approved_count ?> <small class="fs-6">รายการ</small></h2>
                             </div>
                         </div>
                     </div>

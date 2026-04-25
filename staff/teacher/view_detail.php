@@ -157,20 +157,6 @@ try {
                         </div>
                         </div>
                     </div>
-
-                    <?php if ($req['status_id'] == 1): ?>
-                    <div class="mt-5 p-4 border rounded-4 bg-light shadow-sm text-center">
-                        <form action="approve_request.php" method="POST" class="d-flex gap-3 justify-content-center">
-                            <input type="hidden" name="request_id" value="<?= $req['request_id'] ?>">
-                            <button type="submit" name="action" value="approve" class="btn btn-success rounded-pill px-5 py-2 fw-bold" onclick="return confirm('ยืนยันการอนุมัติคำร้อง?');">
-                                อนุมัติ
-                            </button>
-                            <button type="submit" name="action" value="reject" class="btn btn-outline-danger rounded-pill px-5 py-2 fw-bold" onclick="return confirm('ยืนยันการปฏิเสธคำร้อง?');">
-                                ปฏิเสธ
-                            </button>
-                        </form>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
