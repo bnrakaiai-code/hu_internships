@@ -25,7 +25,7 @@ body {
 /* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
 .hero-section.slide-1 {
     background: linear-gradient(rgba(193, 53, 53, 0.8), rgba(248, 115, 115, 0.8)), 
-                url('https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/630999360_1577242997321299_1647169606948081399_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2a1932&_nc_ohc=gD-4pEM3r7MQ7kNvwEHxpx6&_nc_oc=Adqt-oLO3lVLuG7xdnoDOADmLYNRqWDh4jKJr0QIHApDEKWWvquWRyNCvdkN97yR6BE&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=C3BoiTbdxHye0_RNvxsltg&_nc_ss=7a389&oh=00_Af1hHautKsJDnDucJhG6fb4OFFc2u_czKqJFjw7K56XCDw&oe=69EAE31E');
+                url('./img/slide1.jpg');
     background-size: cover;
     background-position: center;
     color: white; 

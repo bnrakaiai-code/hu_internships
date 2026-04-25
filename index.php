@@ -136,13 +136,13 @@
                         ภาษาอังกฤษ <br>
                         ชื่อเต็ม : Bachelor of Arts (Information Studies) <br>
                         ชื่อย่อ : B.A. (Information Studies)</p>
-                    <a class="btn btn-swu rounded-pill" href="http://localhost/hu_internships/about.php" style="padding: 8px 25px;">Read More</a>
+                    <a class="btn btn-swu rounded-pill" href="about.php" style="padding: 8px 25px;">Read More</a>
                 </div>
                 <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden">
-                    <div class="row g-4">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Students studying" class="img-fluid rounded-4 shadow-sm mb-4">
-                    </div>
-                    
+                    <img src="./img/student1.jpg" 
+                         alt="Students studying" 
+                         class="w-100 h-100" 
+                         style="object-fit: cover;">
                 </div>
             </div>
         </div>

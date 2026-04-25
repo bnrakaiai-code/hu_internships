@@ -7,14 +7,15 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSIO
     exit();
 }
 
-// ดึงข้อมูลคำร้องทั้งหมด พร้อมชื่อสถานะ (สมมติว่า join กับตาราง status_list)
-// หากคุณไม่มีตาราง status_list ให้ลบ JOIN ออกแล้วใช้ if-else เช็คจาก status_id ใน HTML แทนได้ครับ
+// ดึงข้อมูลคำร้องทั้งหมด พร้อมชื่อสถานะ และชื่อนิสิต
 $query = "
-    SELECT r.*, s.status_name 
+    SELECT r.*, s.status_name, st.fullname 
     FROM internship_requests r
     LEFT JOIN status_list s ON r.status_id = s.status_id
+    LEFT JOIN students st ON r.student_id = st.student_id
     ORDER BY r.request_date DESC
-";
+    ";
+
 $stmt = $conn->query($query);
 $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -28,11 +29,31 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
-        .sidebar { background: #931e1e; min-height: 100vh; color: white; position: sticky; top: 0; }
-        .nav-link { color: rgba(255,255,255,0.8); margin-bottom: 10px; border-radius: 10px; }
-        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
-        .card-custom { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f8f9fa; 
+        }
+        .sidebar { 
+            background: #931e1e; 
+            min-height: 100vh; 
+            color: white; 
+            position: sticky; 
+            top: 0; 
+        }
+        .nav-link { 
+            color: rgba(255,255,255,0.8); 
+            margin-bottom: 10px; 
+            border-radius: 10px; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: white; 
+            background: rgba(255,255,255,0.1); 
+        }
+        .card-custom { 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+        }
     </style>
 </head>
 <body>
@@ -62,6 +83,7 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <tr>
                                 <th>รหัสคำร้อง</th>
                                 <th>รหัสนิสิต</th>
+                                <th>ชื่อนิสิต</th>
                                 <th>วันที่ยื่นเรื่อง</th>
                                 <th>สถานะปัจจุบัน</th>
                             </tr>
@@ -72,6 +94,7 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <tr>
                                     <td><?= sprintf("%03d", $row['request_id']) ?></td>
                                     <td><?= htmlspecialchars($row['student_id']) ?></td>
+                                    <td><?= htmlspecialchars($row['fullname'] ?? 'ไม่พบข้อมูลชื่อ') ?></td>
                                     <td><?= date('d/m/Y', strtotime($row['request_date'])) ?></td>
                                     <td>
                                         <?php 
