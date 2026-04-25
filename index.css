@@ -3,6 +3,10 @@ body {
     background-color: #ffffff;
 }
 
+html { 
+    scroll-behavior: smooth; 
+}
+
 .navbar-swu {
     background-color: #ffffff !important; 
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
