@@ -68,7 +68,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://i.postimg.cc/bNymgfqZ/paployii.jpg" class="staff-img w-100" alt="Bundita">
+                        <img src="./img/paployii.jpg" class="staff-img w-100" alt="Bundita">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวบัณฑิตา จินรัตน์</h5>
@@ -84,7 +84,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://i.postimg.cc/q7sKWgLV/saalee.jpg" class="staff-img w-100" alt="Boonraksa">
+                        <img src="./img/saalee.jpg" class="staff-img w-100" alt="Boonraksa">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวบุญรักษา น้อยอ้าย</h5>
@@ -104,7 +104,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://i.postimg.cc/XJsjt0Bx/hanaa.jpg" style="width: 250px; height: 250px; object-fit: cover;" class="staff-img w-100" alt="Papitchaya">
+                        <img src="./img/hana.jpg" style="width: 250px; height: 250px; object-fit: cover;" class="staff-img w-100" alt="Papitchaya">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวปพิชญา จงศรีวัฒนาพร</h5>
@@ -120,7 +120,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="https://i.postimg.cc/4ydhKPTg/pimkim.jpg" class="staff-img w-100" alt="Mopim">
+                        <img src="./img/pimkim.jpg" class="staff-img w-100" alt="Mopim">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวโม๋พิม สุขประเสริฐ</h5>
