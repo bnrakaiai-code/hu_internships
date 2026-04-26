@@ -56,6 +56,41 @@
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                     <a class="btn btn-swu rounded-pill" href="login.php" style="padding: 8px 25px;">เข้าสู่ระบบ</a>
                 </li>
+                <!-- แปลภาษา -->
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <div class="lang-switcher">
+                        <a href="#" onclick="doGTranslate('th|th'); return false;" title="ภาษาไทย">
+                            <img src="img/flag-th.webp" alt="Thai Flag" class="flag-icon">
+                        </a>
+                        <span class="switcher-divider">|</span>
+                        <a href="#" onclick="doGTranslate('th|en'); return false;" title="English">
+                            <img src="img/flag-en.jpg" alt="English Flag" class="flag-icon">
+                        </a>
+                    </div>
+                </li>
+                
+                <script type="text/javascript">
+                function doGTranslate(lang_pair) {
+                    var lang = lang_pair.split('|')[1];
+                    var langcode = document.getElementsByClassName('goog-te-combo')[0];
+                    if (langcode == null || langcode.value != lang) {
+                        var select = document.querySelector('select.goog-te-combo');
+                    if (select) {
+                        select.value = lang;
+                        select.dispatchEvent(new Event('change'));
+                    }
+                    }
+                }
+                
+                </script>
+                <div id="google_translate_element" style="display:none;"></div>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'th', autoDisplay: false}, 'google_translate_element');
+                    }
+                </script>
+                
             </ul>
         </div>
     </div>
@@ -143,7 +178,9 @@
                         ภาษาอังกฤษ <br>
                         ชื่อเต็ม : Bachelor of Arts (Information Studies) <br>
                         ชื่อย่อ : B.A. (Information Studies)</p>
-                    <a class="btn btn-swu rounded-pill" href="about.php" style="padding: 8px 25px;">Read More</a>
+                    <a class="btn btn-swu rounded-pill" href="about.php" style="padding: 8px 25px;">
+                        อ่านเพิ่มเติม <i class="bi bi-arrow-up-right"></i>
+                    </a>
                 </div>
                 <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden">
                     <img src="./img/student1.jpg" 
