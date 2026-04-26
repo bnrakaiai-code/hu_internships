@@ -26,37 +26,7 @@ html {
     color: #000000 !important;
 }
 
-/* ปรับแต่งให้ไม่มีกรอบขาวและไม่มีเส้นขอบ */
-.lang-switcher {
-    display: flex;
-    align-items: center;
-    background: transparent !important; /* เปลี่ยนพื้นหลังเป็นโปร่งใส */
-    padding: 0px 10px; /* ลด padding */
-    border: none !important; /* เอาเส้นขอบออก */
-    height: auto;
-    box-shadow: none !important; /* เอาเงาออกถ้ามี */
-}
 
-/* จัดระยะห่างระหว่างธงกับเส้นคั่น */
-.lang-switcher .switcher-divider {
-    color: #555; /* ปรับสีเส้นคั่นตามใจชอบ */
-    padding: 0 8px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* ปรับขนาดรูปธง */
-.lang-switcher .flag-icon {
-    width: 24px;
-    height: auto;
-    display: block;
-    transition: transform 0.2s;
-}
-
-/* เอฟเฟกต์ตอนชี้เมาส์ */
-.lang-switcher a:hover .flag-icon {
-    transform: scale(1.1);
-}
 
 /* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
 .hero-section.slide-1 {
@@ -98,13 +68,13 @@ html {
 
 /* สีปุ่ม Slide 2 */
 .btn-custom-2 {
-    background-color: #ffc107; /* สีพื้นหลังปุ่ม */
+    background-color: #fdf0d5; /* สีพื้นหลังปุ่ม */
     color: #000;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
 .btn-custom-2:hover {
-    background-color: #e0a800; /* สีตอนเอาเม้าส์วาง */
+    background-color: #dac37e; /* สีตอนเอาเม้าส์วาง */
     color: #000;
 }
 
@@ -116,13 +86,13 @@ html {
 
 /* สีปุ่ม Slide 3 */
 .btn-custom-3 {
-    background-color: #17a2b8; /* สีพื้นหลังปุ่ม */
+    background-color: #fdf0d5; /* สีพื้นหลังปุ่ม */
     color: #fff;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
 .btn-custom-3:hover {
-    background-color: #138496; /* สีตอนเอาเม้าส์วาง */
+    background-color: #dac37e; /* สีตอนเอาเม้าส์วาง */
     color: #fff;
 }
 
