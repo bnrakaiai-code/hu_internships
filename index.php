@@ -56,41 +56,6 @@
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                     <a class="btn btn-swu rounded-pill" href="login.php" style="padding: 8px 25px;">เข้าสู่ระบบ</a>
                 </li>
-                <!-- แปลภาษา -->
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <div class="lang-switcher">
-                        <a href="#" onclick="doGTranslate('th|th'); return false;" title="ภาษาไทย">
-                            <img src="img/flag-th.webp" alt="Thai Flag" class="flag-icon">
-                        </a>
-                        <span class="switcher-divider">|</span>
-                        <a href="#" onclick="doGTranslate('th|en'); return false;" title="English">
-                            <img src="img/flag-en.jpg" alt="English Flag" class="flag-icon">
-                        </a>
-                    </div>
-                </li>
-                
-                <script type="text/javascript">
-                function doGTranslate(lang_pair) {
-                    var lang = lang_pair.split('|')[1];
-                    var langcode = document.getElementsByClassName('goog-te-combo')[0];
-                    if (langcode == null || langcode.value != lang) {
-                        var select = document.querySelector('select.goog-te-combo');
-                    if (select) {
-                        select.value = lang;
-                        select.dispatchEvent(new Event('change'));
-                    }
-                    }
-                }
-                
-                </script>
-                <div id="google_translate_element" style="display:none;"></div>
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({pageLanguage: 'th', autoDisplay: false}, 'google_translate_element');
-                    }
-                </script>
-                
             </ul>
         </div>
     </div>
@@ -204,7 +169,7 @@
                 <!-- News Item 1 -->
                 <div class="col-md-4">
                     <div class="card card-news h-100 p-3">
-                        <img src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t39.30808-6/670998104_1629937591589794_6485844448341266661_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=9z8ZiTwNjDsQ7kNvwE24Ez7&_nc_oc=Adpv9mCd2_Y3PlgNxwQJk4xObEleRWvPVphfxaXCWNSZAEJNlPRYZ4Qed7QVykv0KFw&_nc_zt=23&_nc_ht=scontent.fbkk5-6.fna&_nc_gid=S4b0yFxA-AmSBmvbKtL64Q&_nc_ss=7a389&oh=00_Af1YhL5-ibVRUct1GI6aM1t_40RlU8ia017_23UQSM3PLA&oe=69ED30CF" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/news1.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 17 Apr 2026</span>
@@ -213,14 +178,14 @@
                             <h5 class="card-title fw-bold">ขอแสดงความยินดีและร่วมเผยแพร่ผลงานวิจัยระดับนานาชาติ</h5>
                             <p class="card-text text-muted">ผลงานวิจัยจากคณาจารย์หลักสูตร ศศ.ม. สารสนเทศศึกษา กลุ่มสาขาวิชาพัฒนาศักยภาพมนุษย์ ได้รับการตีพิมพ์ในฐานข้อมูลระดับนานาชาติ (SCOPUS)
                                 บทความเรื่อง: “Information Services of Bangkok Metropolitan Administration's Discovery Learning Libraries: Roles and Potential in Driving the Sustainable Development Goals (SDGs)”</p>
-                            <a href="https://www.facebook.com/share/p/1AZtfxuYSV/?mibextid=wwXIfr" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="/img/slide4.jpg" class="text-danger text-decoration-none fw-bold" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- News Item 2 -->
                 <div class="col-md-4">
                     <div class="card card-news h-100 p-3">
-                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/510810177_1391707838746105_1169973082441495128_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=v1B3zml-vJ0Q7kNvwE98OhU&_nc_oc=Adp7GeAnUSEe6t6-rYbNDgo3AB9Ad6yHV77Krj7wYw-ovz9bA0pq9y0CkSSeP_0yUbk&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=ArxoOyUhu_b-cRVuY_Lkfw&_nc_ss=7a389&oh=00_Af0L7BCXAhEJ084hlixkBE_-sJ_DxJUVTSg3FqFMfsdp3w&oe=69ED5A2A" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/news2.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 24 Jun 2025</span>
@@ -236,7 +201,7 @@
                 <!-- News Item 3 -->
                 <div class="col-md-4">
                     <div class="card card-news h-100 p-3">
-                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/511082402_1395557561694466_3455437914072884955_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=0G6hQK6l2IEQ7kNvwH2o8cK&_nc_oc=AdrEj_tbHNBNTxDobO1JkbF5ectzO7ucu0dfPNHtOAltX7NPeEhpAOxzBC-ojU2E5x4&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=iqx-wj6jkr3v9XWHuo0j3w&_nc_ss=7a389&oh=00_Af2IPf7Ev8G_Dy9ISNQ2jYNwc8-b_5N8l9XTQLSNHtdtEA&oe=69ED3C3C" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/news3.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 10 Jun 2025</span>
@@ -263,7 +228,7 @@
                 <!-- activities Item 1 -->
                 <div class="col-md-4">
                     <div class="card card-activities h-100 p-3">
-                        <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t39.30808-6/655661822_1613297087049223_2758694381761646677_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=y2z0_yHIu7AQ7kNvwH6aEpa&_nc_oc=AdoiuIMoONr1uab2ojIErTS8uYYnzVmP2SBQclRNtyTqQLVSRqZM6w5jcd0PJP9W2Ts&_nc_zt=23&_nc_ht=scontent.fbkk5-1.fna&_nc_gid=JixGEuTLx_icV1cmHJI9KQ&_nc_ss=7a389&oh=00_Af26QoMOeHs4maau-iGMBC3GOfp1xq2IAVDX39ifknJpqg&oe=69ED39AC" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/ativity1.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 23 Feb 2026</span>
@@ -279,7 +244,7 @@
                 <!-- activities Item 2 -->
                 <div class="col-md-4">
                     <div class="card card-activities h-100 p-3">
-                        <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/493042177_1322665172779084_2061443328447931420_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=wXHcbs1s3QEQ7kNvwG9qfG0&_nc_oc=AdoHDC0SlYt5v4gK9wlnsJJa5QOXcvO_4t9cCR3Vu21NV2d6ctwftbResBDG7ZA4APg&_nc_zt=23&_nc_ht=scontent.fbkk5-7.fna&_nc_gid=rHoHlz_7epkgNXBzlb8vkA&oh=00_Af39i4aO24H0nkmZMp-joxAw5gVyc_0PKItBWrQvpDjgzw&oe=69F014E5" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/ativity2.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 30 Oct 2024</span>
@@ -295,7 +260,7 @@
                 <!-- activities Item 3 -->
                 <div class="col-md-4">
                     <div class="card card-activities h-100 p-3">
-                        <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t39.30808-6/523032281_1416069249643297_3662674924218715301_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=TFPY5mF--e0Q7kNvwG_KTLx&_nc_oc=Adrq7MdGPd2U40iitdiuTXTaebPQ8Hf5aVsmPwUQKr8EKu6eNRorX0C0tVf1J_h7cKQ&_nc_zt=23&_nc_ht=scontent.fbkk5-5.fna&_nc_gid=7b1MjBhQZTSCvvv-fnwqtw&oh=00_Af2AB8ljNk0eDbVTTmjOnTZM4ZqR0mGVOUI6eqeWJFAC3w&oe=69F01EEA" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
+                        <img src="./img/ativity3.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
                             <div class="d-flex text-muted mb-2 small">
                                 <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 24 Jul 2025</span>
