@@ -33,26 +33,73 @@ $last_request = $stmt_req->fetch();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard นิสิต | IS SWU</title>
+    <title>Dashboard นิสิต | SWU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Prompt', sans-serif; background-color: #f8f9fa; }
-        .sidebar { background: #931e1e; min-height: 100vh; color: white; position: sticky; top: 0; }
-        .nav-link { color: rgba(255,255,255,0.8); margin-bottom: 10px; border-radius: 10px; transition: 0.3s; }
-        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
-        .card-custom { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; background: white; }
-        .welcome-section { background: white; padding: 25px; border-radius: 15px; border-left: 5px solid #931e1e; }
-        .btn-swu { background: #931e1e; color: white; border-radius: 25px; border: none; transition: 0.3s; }
-        .btn-swu:hover { background: #7a1818; color: white; transform: scale(1.02); }
+        body { 
+            font-family: 'Prompt', sans-serif; 
+            background-color: #f8f9fa; 
+        }
+        .sidebar { 
+            background: #931e1e; 
+            min-height: 100vh; 
+            color: white; 
+            position: sticky; 
+            top: 0; 
+        }
+        .nav-link { 
+            color: rgba(255,255,255,0.8); 
+            margin-bottom: 10px; 
+            border-radius: 10px; 
+            transition: 0.3s; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: white; 
+            background: rgba(255,255,255,0.1); 
+        }
+        .card-custom { 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+            transition: 0.3s; 
+            background: white; 
+        }
+        .welcome-section { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            border-left: 5px solid #931e1e; 
+        }
+        .btn-swu { 
+            background: #931e1e; 
+            color: white; 
+            border-radius: 25px; 
+            border: none; 
+            transition: 0.3s; 
+        }
+        .btn-swu:hover { 
+            background: #7a1818; 
+            color: white; 
+            transform: scale(1.02); 
+        }
 
         /* ปรับแต่งสำหรับ Mobile */
         @media (max-width: 767.98px) {
-            .sidebar { display: none; }
-            .welcome-section { text-align: center; }
-            .welcome-section .d-flex { flex-direction: column; gap: 15px; }
-            .btn-swu { width: 100%; }
+            .sidebar { 
+                display: none; 
+            }
+            .welcome-section { 
+                text-align: center; 
+            }
+            .welcome-section .d-flex { f
+            lex-direction: column; 
+            gap: 15px; 
+            }
+            .btn-swu { 
+                width: 100%; 
+            }
         }
     </style>
 </head>
@@ -60,7 +107,7 @@ $last_request = $stmt_req->fetch();
 
 <nav class="navbar navbar-dark bg-danger d-md-none p-3 shadow-sm" style="background: #931e1e !important;">
     <div class="container-fluid">
-        <span class="navbar-brand fw-bold">IS | SWU</span>
+        <span class="navbar-brand fw-bold">Internship <Portal></Portal></span>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -72,11 +119,15 @@ $last_request = $stmt_req->fetch();
         <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar p-4 shadow">
             <div class="text-center mb-4">
                 <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
-                <h5 class="fw-bold">IS | SWU</h5>
+                <h5 class="fw-bold">Internship Portal</h5>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link active" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>
-                <li class="nav-item"><a class="nav-link" href="internship_apply.php"><i class="bi bi-file-earmark-plus me-2"></i> ยื่นคำร้องใหม่</a></li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="<?= $last_request ? 'view_detail.php?id='.$last_request['request_id'] : '#' ?>">
+                        <i class="bi bi-file-earmark-plus me-2"></i> คำร้องของฉัน
+                    </a>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="view_status.php"><i class="bi bi-search me-2"></i> ติดตามสถานะ</a></li>
                 <li class="nav-item mt-5"><a class="nav-link text-warning" href="../logout.php"><i class="bi bi-box-arrow-left me-2"></i> ออกจากระบบ</a></li>
             </ul>
@@ -90,7 +141,11 @@ $last_request = $stmt_req->fetch();
             <div class="offcanvas-body">
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link text-white" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="internship_apply.php"><i class="bi bi-file-earmark-plus me-2"></i> ยื่นคำร้องใหม่</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $last_request ? 'view_detail.php?id='.$last_request['request_id'] : '#' ?>">
+                            <i class="bi bi-file-earmark-plus me-2"></i> คำร้องของฉัน
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link text-white" href="view_status.php"><i class="bi bi-search me-2"></i> ติดตามสถานะ</a></li>
                     <li class="nav-item mt-4"><a class="nav-link text-warning" href="../logout.php"><i class="bi bi-box-arrow-left me-2"></i> ออกจากระบบ</a></li>
                 </ul>

@@ -132,6 +132,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     <footer class="py-5 text-white" style="background-color: #931e1e;">
         <div class="container">

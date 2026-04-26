@@ -166,7 +166,7 @@ try {
                                 <td><?php echo htmlspecialchars($req['student_id']); ?></td>
                                 <td><?php echo htmlspecialchars($req['fullname']); ?></td>
                                 <td>
-                                    <a href="view_detail.php?id=<?= $req['request_id'] ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3"> ดูรายละเอียด </a>
+                                    <a href="view_detail.php? id=<?= $req['request_id'] ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3"> ดูรายละเอียด </a>
                                 </td>
                                 <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
                                 <td>

@@ -1,20 +1,23 @@
 <?php
 session_start();
-include('../../includes/db_connect.php');
+include('../includes/db_connect.php');
 
-// ตรวจสอบสิทธิ์การเข้าถึง (Admin/Staff)
-if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'staff')) {
-    header("Location: ../../login.php");
+// ตรวจสอบสิทธิ์การเข้าถึง (Students)
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
+    header("Location: ../login.php");
     exit();
 }
 
+$student_id = $_SESSION['user_id']; // ดึง ID ของนิสิตที่ Login อยู่
 $request_id = $_GET['id'] ?? null;
+
 if (!$request_id) {
     header("Location: index.php");
     exit();
 }
 
 try {
+    // เพิ่มเงื่อนไข AND r.student_id = :student_id เพื่อความปลอดภัย
     $query = "
         SELECT r.*, 
                s.fullname as student_name, 
@@ -22,15 +25,17 @@ try {
         FROM internship_requests r
         LEFT JOIN students s ON r.student_id = s.student_id
         LEFT JOIN companies c ON r.company_id = c.company_id
-        WHERE r.request_id = :id
+        WHERE r.request_id = :id AND r.student_id = :student_id
     ";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':id', $request_id, PDO::PARAM_INT);
+    $stmt->bindParam(':student_id', $student_id); // Bind ค่า student_id จาก session
     $stmt->execute();
     $req = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    // หากไม่พบข้อมูล (อาจเพราะ ID ไม่ใช่ของตัวเอง หรือไม่มี ID นี้) ให้เด้งกลับ
     if (!$req) {
-        echo "<script>alert('ไม่พบข้อมูลคำร้อง'); window.location='index.php';</script>";
+        echo "<script>alert('ไม่พบข้อมูลคำร้องของคุณ หรือคุณไม่มีสิทธิ์เข้าถึงข้อมูลนี้'); window.location='index.php';</script>";
         exit();
     }
 } catch (PDOException $e) {
@@ -166,7 +171,7 @@ try {
                             <div class="info-value">
                                 <?php if (!empty($req['request_document'])): ?>
                                     <?php 
-                                        $file_path = "../../uploads/" . $req['request_document']; 
+                                        $file_path = "../uploads/" . $req['request_document']; 
                                     ?>
             
                                     <div class="d-flex align-items-center p-3 border rounded bg-light">
