@@ -108,7 +108,7 @@ html {
 
 /* --- ปุ่มสีแดง มศว --- */
 .btn-swu {
-    background-color: #931e1e;
+    background-color: #ae2727;
     color: white !important; /* บังคับตัวหนังสือสีขาว */
     border-radius: 25px;
     padding: 10px 30px;
@@ -118,7 +118,7 @@ html {
 
 /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
 .btn-swu:hover {
-    background-color: #701616;
+    background-color: #d22c2c;
     color: white !important; 
     transform: scale(1.05); 
 }
@@ -132,6 +132,8 @@ html {
     transform: translateY(-8px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
+
+/* --- การ์ดกิจกรรม --- */
 
 .card-activities {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,4 +159,36 @@ html {
 /* สร้างระยะเผื่อให้กับ Section เมื่อถูกกดลิงก์มาที่หลักสูตร */
 .anchor-section {
     scroll-margin-top: 100px; /* เว้นระยะด้านบนไว้ 100px ก่อนจะถึงหัวข้อ */
+}
+
+/* ปรับแต่งให้ไม่มีกรอบขาวและไม่มีเส้นขอบ */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    background: transparent !important; /* เปลี่ยนพื้นหลังเป็นโปร่งใส */
+    padding: 0px 10px; /* ลด padding */
+    border: none !important; /* เอาเส้นขอบออก */
+    height: auto;
+    box-shadow: none !important; /* เอาเงาออกถ้ามี */
+}
+
+/* จัดระยะห่างระหว่างธงกับเส้นคั่น */
+.lang-switcher .switcher-divider {
+    color: #555; /* ปรับสีเส้นคั่นตามใจชอบ */
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* ปรับขนาดรูปธง */
+.lang-switcher .flag-icon {
+    width: 24px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+}
+
+/* เอฟเฟกต์ตอนชี้เมาส์ */
+.lang-switcher a:hover .flag-icon {
+    transform: scale(1.1);
 }
