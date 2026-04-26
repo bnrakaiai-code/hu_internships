@@ -56,7 +56,7 @@ unset($_SESSION['error']);
                 <label class="form-label">ประเภทผู้ใช้งาน</label>
                 <select class="form-select" name="role" required>
                     <option value="student">นิสิต (รหัสนิสิต)</option>
-                    <option value="staff">เจ้าหน้าที่ (admin)</option>
+                    <option value="admin">เจ้าหน้าที่ (admin)</option>
                     <option value="teacher">อาจารย์ (teacher)</option>
                 </select>
             </div>

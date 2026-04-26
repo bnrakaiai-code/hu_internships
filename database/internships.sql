@@ -4,10 +4,6 @@
 CREATE DATABASE IF NOT EXISTS internships;
 USE internships;
 
--- ==========================================
--- 1. สร้างตาราง (Create Tables)
--- ==========================================
-
 CREATE TABLE status_list ( 
     status_id int primary key, 
     status_name varchar(50) not null
@@ -50,7 +46,6 @@ CREATE TABLE staff (
     staff_id char(4) primary key,
     username varchar(50) not null unique,
     password varchar(4) not null default '1234',
-    fullname varchar(100) not null,
     role enum('admin', 'teacher') not null
 ) engine=innodb default charset=utf8mb4;
 
@@ -66,21 +61,17 @@ CREATE TABLE status_log (
     constraint fk_new_status foreign key (new_status_id) references status_list(status_id)
 ) engine=innodb default charset=utf8mb4;
 
--- ==========================================
--- 2. เพิ่มข้อมูลลงในตาราง (Insert Data)
--- ==========================================
-
 -- เพิ่มข้อมูลสถานะ
 INSERT INTO status_list (status_id, status_name) VALUES
 (1, 'รอตรวจสอบ'),
 (2, 'อาจารย์ที่ปรึกษาอนุมัติ'),
-(3, 'ออกหนังสือส่งตัวแล้ว'),
+(3, 'ส่งหนังสือส่งตัวแล้ว'),
 (4, 'เสร็จสิ้นการฝึกงาน'),
 (9, 'ไม่ผ่านการอนุมัติ/ยกเลิก');
 
 -- เพิ่มข้อมูลนิสิตจำนวน 40 รายการ
-INSERT IGNORE INTO students (student_id, fullname, email, phone, year_level, major, advisor_id) 
-VALUES  ('68101010492', 'สมชาย รักดี', 'somchai.r@g.swu.ac.th', '081-234-5678', 1, 'สารสนเทศศึกษา', 708040),
+INSERT IGNORE INTO students (student_id, fullname, email, phone, year_level, major, advisor_id) VALUES
+('68101010492', 'สมชาย รักดี', 'somchai.r@g.swu.ac.th', '081-234-5678', 1, 'สารสนเทศศึกษา', 708040),
 ('68101010125', 'กัญญา วัฒนา', 'kanya.w@g.swu.ac.th', '082-345-6789', 1, 'สารสนเทศศึกษา', 708040),
 ('68101010783', 'อนันดา ศิริ', 'ananda.s@g.swu.ac.th', '083-456-7890', 1, 'สารสนเทศศึกษา', 708040),
 ('68101010341', 'พัชระ มงคล', 'patchara.m@g.swu.ac.th', '084-567-8901', 1, 'สารสนเทศศึกษา', 708040),
@@ -122,16 +113,6 @@ VALUES  ('68101010492', 'สมชาย รักดี', 'somchai.r@g.swu.ac.t
 ('65101010881', 'วิไลวรรณ ศรี', 'wilaiwan.s@g.swu.ac.th', '090-555-0010', 4, 'สารสนเทศศึกษา', 710238);
 
 -- เพิ่มข้อมูลบุคลากร
-INSERT INTO staff (staff_id, username, password, fullname, `role` ) VALUES
-('AM29', 'Bundita.c', '1234', 'บัณฑิตา จินรัตน์', 'admin'),
-('AM30', 'Boonraksa.n', '1234', 'บุญรักษา น้อยอ้าย', 'admin'),
-('AM31', 'Papitchaya.j', '1234', 'ปพิชญา จงศรีวัฒนาพร', 'admin'),
-('AM44', 'Mopim.s', '1234', 'โม๋พิม สุขประเสริฐ', 'admin'),
-('TC01', 'Vipakorn.v', '1234', 'วิภากร วัฒนสินธุ์', 'teacher'),
-('TC02', 'Dussadee.s', '1234', 'ดุษฎี สีวังคำ', 'teacher'),
-('TC03', 'Dit.s', '1234', 'ดิษฐ์ สุทธิวงศ์', 'teacher'),
-('TC04', 'Thiti.a', '1234', 'ฐิติ อติชาติชยากร', 'teacher'),
-('TC05', 'Chokthamrong.c', '1234', 'โชคธำรงค์ จงจอหอ', 'teacher'),
-('TC06', 'Chotima.w', '1234', 'โชติมา วัฒนะ', 'teacher'),
-('TC07', 'Sasipimol.p', '1234', 'ศศิพิมล ประพินพงศกร', 'teacher'),
-('TC08', 'Sumattra.s', '1234', 'ศุมรรษตรา แสนวา', 'teacher');
+INSERT INTO staff (staff_id, username, password, role) VALUES
+('AM01', 'admin', '1234', 'admin'),
+('TC01', 'teacher', '1234', 'teacher');
