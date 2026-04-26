@@ -96,6 +96,7 @@
     </div>
     </nav>
     
+    <!-- สไลด์หน้าหลัก -->
     <header id="swuCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="0" class="active"></button>
@@ -131,22 +132,23 @@
                 </div>
             </div>
         </div>
-    
+        
         <div class="carousel-item">
             <div class="hero-section slide-2">
                 <div class="container text-white text-center">
-                    <h1 class="display-4 fw-bold">ข่าวประชาสัมพันธ์</h1>
-                    <p class="fs-5">ติดตามข่าวสารและประกาศล่าสุดจากทางสาขาวิชา</p>
-                    <a href="#news" class="btn btn-light rounded-pill px-4">อ่านข่าวทั้งหมด</a>
+                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-2">- ข่าวประชาสัมพันธ์ -</h1>
+                    <p class="fs-5 animate__animated animate__fadeInUp animate__delay-1s">ติดตามข่าวสารและประกาศจากทางสาขาวิชา</p>
+                    <a href="#news" class="btn btn-custom-2 rounded-pill px-4 animate__animated animate__fadeInUp animate__delay-2s">อ่านข่าวทั้งหมด</a>
                 </div>
             </div>
         </div>
+
         <div class="carousel-item">
             <div class="hero-section slide-3">
                 <div class="container text-white text-center">
-                    <h1 class="display-4 fw-bold">กิจกรรมสาขาวิชา</h1>
-                    <p class="fs-5">ภาพบรรยากาศกิจกรรมและการพัฒนานิสิต</p>
-                    <a href="#activities" class="btn btn-swu rounded-pill px-4">ดูกิจกรรมทั้งหมด</a>
+                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-3">- กิจกรรมสาขาวิชา -</h1>
+                    <p class="fs-5 animate__animated animate__fadeInUp animate__delay-1s">ภาพบรรยากาศกิจกรรมและการพัฒนานิสิต</p>
+                    <a href="#activities" class="btn btn-custom-3 rounded-pill px-4 animate__animated animate__fadeInUp animate__delay-2s">ดูกิจกรรมทั้งหมด</a>
                 </div>
             </div>
         </div>

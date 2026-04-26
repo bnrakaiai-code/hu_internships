@@ -40,7 +40,7 @@ html {
 /* Slide 2: ข่าวประชาสัมพันธ์ */
 .hero-section.slide-2 {
     background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
-                url('https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/509939200_1391707805412775_6337660339211142142_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=LsVgTa6hMX8Q7kNvwGO6uUp&_nc_oc=AdqP9qJUAsdKULFJRXy75WiehWh61Yp_XVsCQl8EgtrDWd-ILJ_7Gh2nC2IdmSAa9nlqy25py5ppAgEs-UIGNTNz&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&_nc_gid=XhyEEMg2BrLXY3xU_HG37g&oh=00_Af1bl-ogLteK16Fs8ZIOrUrSaE38V3_Q3wPJOQLFjYN5zg&oe=69EFAF7D');
+                url('./img/slide2.jpg');
     background-size: cover;
     background-position: center;
     padding: 200px 0;
@@ -50,12 +50,55 @@ html {
 /* Slide 3: กิจกรรมสาขาวิชา */
 .hero-section.slide-3 {
     background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
-                url('https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/655654281_1613297127049219_5826073833652133486_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EX6kvFkew34Q7kNvwHja4Ak&_nc_oc=Adq16-55PK_4-UFqCsNYEf24bKMef1pXTzzRbdo_0ZIXwQqwwdOWPLK0TZ6fbAFLx8fMB_VKcuDrv4u_f4lsnf52&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=OtT4yIyTU8jDzsNUwq0uRg&oh=00_Af1LkuJQKJ6wyobOCYOfuG1ltSw0WcQrf4ezavMuNV40JA&oe=69EFB239');
+                url('./img/slide3.jpg');
     background-size: cover;
     background-position: center;
     color: white; 
     padding: 200px 0;
     text-align: center;
+}
+
+/* --- Slide 2 Custom Colors --- */
+/* สีหัวข้อ Slide 2 */
+.slide-title-custom-2 {
+    color: #ffffff; /* เปลี่ยนโค้ดสีที่นี่ */
+}
+
+/* สีปุ่ม Slide 2 */
+.btn-custom-2 {
+    background-color: #ffc107; /* สีพื้นหลังปุ่ม */
+    color: #000;               /* สีตัวอักษรในปุ่ม */
+    border: none;
+    transition: 0.3s;
+}
+.btn-custom-2:hover {
+    background-color: #e0a800; /* สีตอนเอาเม้าส์วาง */
+    color: #000;
+}
+
+/* --- Slide 3 Custom Colors --- */
+/* สีหัวข้อ Slide 3 */
+.slide-title-custom-3 {
+    color: #ffffff; /* เปลี่ยนโค้ดสีที่นี่ */
+}
+
+/* สีปุ่ม Slide 3 */
+.btn-custom-3 {
+    background-color: #17a2b8; /* สีพื้นหลังปุ่ม */
+    color: #fff;               /* สีตัวอักษรในปุ่ม */
+    border: none;
+    transition: 0.3s;
+}
+.btn-custom-3:hover {
+    background-color: #138496; /* สีตอนเอาเม้าส์วาง */
+    color: #fff;
+}
+
+/* ปรับแต่งเพิ่มเติมเพื่อให้ Animation ทำงานทุกครั้งที่เปลี่ยนสไลด์ */
+.carousel-item-next .animate__animated,
+.carousel-item-prev .animate__animated,
+.carousel-item.active .animate__animated {
+    /* นี่จะช่วยให้มั่นใจว่า animation ทำงานเมื่อ class active ปรากฏ */
 }
 
 /* บังคับซ่อนทุกอย่างที่เป็นส่วนควบคุมของ Carousel */
