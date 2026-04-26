@@ -26,7 +26,7 @@ $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Teacher | IS SWU</title>
+    <title>Dashboard Teacher | SWU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -87,7 +87,7 @@ $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
 
 <nav class="navbar navbar-dark bg-danger d-md-none p-3 shadow-sm" style="background: #931e1e !important;">
     <div class="container-fluid">
-        <span class="navbar-brand fw-bold">IS | SWU Teacher</span>
+        <span class="navbar-brand fw-bold">Teacher Panel</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#teacherSidebar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -99,7 +99,7 @@ $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
         <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar p-4 shadow">
             <div class="text-center mb-4">
                 <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
-                <h5 class="fw-bold">IS | SWU Teacher</h5>
+                <h5 class="fw-bold">Teacher Panel</h5>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link active" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>
