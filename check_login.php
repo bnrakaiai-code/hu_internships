@@ -18,14 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $table = "students";
         $user_column = "student_id";    
         $redirect_page = "students/index.php";  
-    } elseif ($role == 'staff') {
+    } elseif ($role == 'admin') {
         $table = "staff";               
         $user_column = "role";
         $role_condition = "AND role = 'admin'"; 
         $redirect_page = "staff/admin/index.php"; 
     } elseif ($role == 'teacher') {
         $table = "staff";               
-        $user_column = "role";
+        $user_column = "username";
         $role_condition = "AND role = 'teacher'"; 
         $redirect_page = "staff/teacher/index.php"; 
     } else {
