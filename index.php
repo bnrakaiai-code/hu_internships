@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-
+<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-swu sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
@@ -96,14 +96,14 @@
     </div>
     </nav>
     
-    <!-- สไลด์หน้าหลัก -->
+<!-- สไลด์หน้าหลัก -->
     <header id="swuCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="2"></button>
     </div>
-
+    <!-- Slide 1 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="hero-section slide-1">
@@ -132,7 +132,7 @@
                 </div>
             </div>
         </div>
-        
+        <!-- Slide 2 -->        
         <div class="carousel-item">
             <div class="hero-section slide-2">
                 <div class="container text-white text-center">
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Slide 3 -->
         <div class="carousel-item">
             <div class="hero-section slide-3">
                 <div class="container text-white text-center">
@@ -162,7 +162,7 @@
     </button>
     </header>
 
-    <!-- ข้อมูลหลักสูตร -->
+<!-- ข้อมูลหลักสูตร -->
     <section id="showcase" class="py-5 bg-light anchor-section">
         <div class="container py-5">
             <div class="row align-items-center">
@@ -194,7 +194,7 @@
         </div>
     </section>
 
-    <!-- ประชาสัมพันธ์ -->
+<!-- ประชาสัมพันธ์ -->
     <section id="news" class="bg-light py-5">
         <div class="container">
             <h2 class="fw-bold mb-4">
@@ -253,7 +253,7 @@
         </div>
     </section>
 
-    <!-- กิจกรรม -->
+<!-- กิจกรรม -->
     <section id="activities" class="bg-light py-5">
         <div class="container">
             <h2 class="fw-bold mb-4">
@@ -312,6 +312,7 @@
         </div>
     </section>
 
+<!-- Footer Section -->
     <footer class="py-5 text-white" style="background-color: #931e1e;">
     <div class="container">
         <div class="row align-items-center">

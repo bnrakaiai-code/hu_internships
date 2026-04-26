@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./staff1.css">
 </head>
 <body>
-
+<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-swu sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.php">

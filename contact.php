@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
      <link rel="stylesheet" href="./about.css"> </head>
 <body>
-
+<!-- Navbar -->
      <nav class="navbar navbar-expand-lg navbar-dark navbar-swu sticky-top shadow">
           <div class="container">
                <a class="navbar-brand fw-bold d-flex align-items-center" href="index.php">
@@ -49,7 +49,7 @@
                </div>
           </div>
      </nav>
-
+<!-- Contact -->
      <header class="py-5 text-center text-white" style="background-color: #931e1e;">
           <div class="container">
                <h1 class="fw-bold">ติดต่อเรา</h1>
@@ -102,6 +102,7 @@
      </div>
      </main>
 
+<!-- Footer Section -->
      <footer class="py-5 text-white" style="background-color: #931e1e;">
           <div class="container">
                <div class="row align-items-center">

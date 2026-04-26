@@ -26,6 +26,38 @@ html {
     color: #000000 !important;
 }
 
+/* ปรับแต่งให้ไม่มีกรอบขาวและไม่มีเส้นขอบ */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    background: transparent !important; /* เปลี่ยนพื้นหลังเป็นโปร่งใส */
+    padding: 0px 10px; /* ลด padding */
+    border: none !important; /* เอาเส้นขอบออก */
+    height: auto;
+    box-shadow: none !important; /* เอาเงาออกถ้ามี */
+}
+
+/* จัดระยะห่างระหว่างธงกับเส้นคั่น */
+.lang-switcher .switcher-divider {
+    color: #555; /* ปรับสีเส้นคั่นตามใจชอบ */
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* ปรับขนาดรูปธง */
+.lang-switcher .flag-icon {
+    width: 24px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+}
+
+/* เอฟเฟกต์ตอนชี้เมาส์ */
+.lang-switcher a:hover .flag-icon {
+    transform: scale(1.1);
+}
+
 /* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
 .hero-section.slide-1 {
     background: linear-gradient(rgba(193, 53, 53, 0.8), rgba(248, 115, 115, 0.8)), 
@@ -94,13 +126,6 @@ html {
     color: #fff;
 }
 
-/* ปรับแต่งเพิ่มเติมเพื่อให้ Animation ทำงานทุกครั้งที่เปลี่ยนสไลด์ */
-.carousel-item-next .animate__animated,
-.carousel-item-prev .animate__animated,
-.carousel-item.active .animate__animated {
-    /* นี่จะช่วยให้มั่นใจว่า animation ทำงานเมื่อ class active ปรากฏ */
-}
-
 /* บังคับซ่อนทุกอย่างที่เป็นส่วนควบคุมของ Carousel */
 #swuCarousel .carousel-control-prev,
 #swuCarousel .carousel-control-next,
@@ -161,7 +186,7 @@ html {
 
 /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
 .btn-swu:hover {
-    background-color: #d22c2c;
+    background-color: #dc3434;
     color: white !important; 
     transform: scale(1.05); 
 }
@@ -202,36 +227,4 @@ html {
 /* สร้างระยะเผื่อให้กับ Section เมื่อถูกกดลิงก์มาที่หลักสูตร */
 .anchor-section {
     scroll-margin-top: 100px; /* เว้นระยะด้านบนไว้ 100px ก่อนจะถึงหัวข้อ */
-}
-
-/* ปรับแต่งให้ไม่มีกรอบขาวและไม่มีเส้นขอบ */
-.lang-switcher {
-    display: flex;
-    align-items: center;
-    background: transparent !important; /* เปลี่ยนพื้นหลังเป็นโปร่งใส */
-    padding: 0px 10px; /* ลด padding */
-    border: none !important; /* เอาเส้นขอบออก */
-    height: auto;
-    box-shadow: none !important; /* เอาเงาออกถ้ามี */
-}
-
-/* จัดระยะห่างระหว่างธงกับเส้นคั่น */
-.lang-switcher .switcher-divider {
-    color: #555; /* ปรับสีเส้นคั่นตามใจชอบ */
-    padding: 0 8px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* ปรับขนาดรูปธง */
-.lang-switcher .flag-icon {
-    width: 24px;
-    height: auto;
-    display: block;
-    transition: transform 0.2s;
-}
-
-/* เอฟเฟกต์ตอนชี้เมาส์ */
-.lang-switcher a:hover .flag-icon {
-    transform: scale(1.1);
 }
