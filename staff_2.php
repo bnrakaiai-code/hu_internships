@@ -97,14 +97,13 @@
                 </div>
             </div>
         </div>
-    </div>
 
         <div class="row g-4 justify-content-center">
             <!-- admin 3 -->
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card staff-card border-top border-danger border-5 h-100 shadow-sm">
                     <div class="img-container">
-                        <img src="./img/hana.jpg" style="width: 250px; height: 250px; object-fit: cover;" class="staff-img w-100" alt="Papitchaya">
+                        <img src="./img/hana.jpg" class="staff-img w-100" alt="Papitchaya">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="fw-bold mb-1">นางสาวปพิชญา จงศรีวัฒนาพร</h5>

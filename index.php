@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./index.css">
     <style>
         .card-news {
@@ -74,22 +75,28 @@
                     <div class="row align-items-center">
                         <div class="col-md-10 col-lg-8 text-start">
                             <div class="title-bar p-3 p-md-4 mb-4" style="background-color: rgba(73, 73, 73, 0.2);">
-                                <h1 class="display-3 fw-bold text-white mb-1" style="font-size: calc(1.4rem + 1vw);">
+                                
+                                <h1 class="display-3 fw-bold text-white mb-1 animate__animated animate__fadeInUp" style="font-size: calc(1.4rem + 1vw);">
                                 หลักสูตรศิลปศาสตรบัณฑิต<br>สาขาวิชาสารสนเทศศึกษา
                                 </h1>
-                                <h2 class="h2 fw-bold text-white mb-0" style="font-size: calc(1.1rem + 0.6vw);">
+                                
+                                <h2 class="h2 fw-bold text-white mb-0 animate__animated animate__fadeInUp animate__delay-1s" style="font-size: calc(1.1rem + 0.6vw);">
                                 Bachelor of Arts Program in Information Studies
                                 </h2>
+                                
                             </div>
-                            <div class="subtitle text-white ps-3 ps-md-4" style="line-height: 1.2;">
+                            
+                            <div class="subtitle text-white ps-3 ps-md-4 animate__animated animate__fadeIn animate__delay-2s" style="line-height: 1.2;">
                                 <p class="mb-0 fs-5">คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
                                 <p class="mb-0 fs-5">Faculty of Humanities Srinakharinwirot University</p>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    
         <div class="carousel-item">
             <div class="hero-section slide-2">
                 <div class="container text-white text-center">
