@@ -68,14 +68,14 @@ html {
 
 /* สีปุ่ม Slide 2 */
 .btn-custom-2 {
-    background-color: #fdf0d5; /* สีพื้นหลังปุ่ม */
-    color: #000;               /* สีตัวอักษรในปุ่ม */
+    background-color: #a8dadc; /* สีพื้นหลังปุ่ม */
+    color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
 .btn-custom-2:hover {
-    background-color: #dac37e; /* สีตอนเอาเม้าส์วาง */
-    color: #000;
+    background-color: #457b9d; /* สีตอนเอาเม้าส์วาง */
+    color: #fff;
 }
 
 /* --- Slide 3 Custom Colors --- */
@@ -86,13 +86,13 @@ html {
 
 /* สีปุ่ม Slide 3 */
 .btn-custom-3 {
-    background-color: #fdf0d5; /* สีพื้นหลังปุ่ม */
-    color: #fff;               /* สีตัวอักษรในปุ่ม */
+    background-color: #a8dadc; /* สีพื้นหลังปุ่ม */
+    color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
 .btn-custom-3:hover {
-    background-color: #dac37e; /* สีตอนเอาเม้าส์วาง */
+    background-color: #457b9d; /* สีตอนเอาเม้าส์วาง */
     color: #fff;
 }
 
