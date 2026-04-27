@@ -68,13 +68,13 @@ html {
 
 /* สีปุ่ม Slide 2 */
 .btn-custom-2 {
-    background-color: #a8dadc; /* สีพื้นหลังปุ่ม */
+    background-color: #f9ed95; /* สีพื้นหลังปุ่ม */
     color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
 .btn-custom-2:hover {
-    background-color: #457b9d; /* สีตอนเอาเม้าส์วาง */
+    background-color: #e0c229; /* สีตอนเอาเม้าส์วาง */
     color: #fff;
 }
 

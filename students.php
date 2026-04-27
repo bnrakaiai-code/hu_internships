@@ -76,8 +76,8 @@ if ($search != "") {
     <nav class="navbar navbar-expand-lg navbar-light navbar-swu sticky-top bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.php">
-                <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" 
-                     alt="SWU Logo" width="70" height="70" class="d-inline-block align-top me-2 bg-white rounded-circle p-1">
+                <img src="/hu_internships/img/swulogo_en.png" 
+                     alt="SWU Logo" width="80" height="80" class="d-inline-block align-top me-2 bg-white rounded-circle p-1">
                 <div>
                     <h5 class="mb-0 font-serif fw-bold" style="color: #931e1e; font-size: 24px; line-height: 0.7;">Information Studies</h5>
                     <small class="text-muted" style="font-size: 0.8rem; letter-spacing: 1px;">SRINAKHARINWIROT UNIVERSITY</small>
@@ -103,7 +103,12 @@ if ($search != "") {
                     </li>
                     <li class="nav-item"><a class="nav-link" href="http://localhost/hu_internships/contact.php">ติดต่อเรา</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="btn btn-danger rounded-pill" href="login.php" style="background-color: #931e1e; padding: 8px 25px;">เข้าสู่ระบบ</a>
+                        <a class="btn btn-danger rounded-pill" 
+                        href="login.php" 
+                        style="background-color: #931e1e; padding: 8px 25px; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='scale(1.1)'" 
+                        onmouseout="this.style.transform='scale(1)'">เข้าสู่ระบบ
+                        </a>
                     </li>
                 </ul>
             </div>
