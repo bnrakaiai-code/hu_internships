@@ -115,8 +115,8 @@ unset($_SESSION['error']);
             cursor: pointer;
         }
         .glass-input-group select option {
-            background: #b67d7d; /* สีพื้นหลัง dropdown เมื่อกดเลือก */
-            color: #ffffff;
+            background: #afe8ff; /* สีพื้นหลัง dropdown เมื่อกดเลือก */
+            color: #080808;
         }
 
         .glass-input-group label {
@@ -234,7 +234,7 @@ unset($_SESSION['error']);
 <body>
 
     <div class="login-box">
-        <h4>เข้าสู่ระบบนิสิต</h4>
+        <h4>เข้าสู่ระบบ</h4>
         <p class="subtitle">ระบบจัดการการฝึกงาน IS SWU</p>
         
         <?php if($error) echo "<div class='alert alert-glass py-2 small text-center mb-4'>$error</div>"; ?>

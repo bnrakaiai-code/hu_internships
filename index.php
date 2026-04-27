@@ -24,10 +24,10 @@
     <nav class="navbar navbar-expand-lg navbar-light navbar-swu sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-            <img src="/hu_internships/img/swulogo_en.png" 
+            <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" 
                  alt="SWU Logo" 
-                 width="80" 
-                 height="80" 
+                 width="70" 
+                 height="70" 
                  class="d-inline-block align-top me-2 bg-white rounded-circle p-1">
             <div>
                     <h5 class="mb-0 font-serif fw-bold" style="color: #931e1e; font-size: 24px; line-height: 0.7;">Information Studies</h5>

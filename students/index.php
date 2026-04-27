@@ -104,7 +104,7 @@ $last_request = $stmt_req->fetch();
     </style>
 </head>
 <body>
-
+ <!-- nav bar -->
 <nav class="navbar navbar-dark bg-danger d-md-none p-3 shadow-sm" style="background: #931e1e !important;">
     <div class="container-fluid">
         <span class="navbar-brand fw-bold">Internship <Portal></Portal></span>
