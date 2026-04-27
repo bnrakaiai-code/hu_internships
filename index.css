@@ -196,6 +196,38 @@ html {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
+/* ตั้งค่า Transition ให้การเปลี่ยนสีดูนุ่มนวล */
+.card-news, .card-activities {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* เปลี่ยนเป็นสีแดงเมื่อเอาเมาส์ไปชี้ที่ Card */
+.card-news:hover, .card-activities:hover {
+    background-color: #bb1c1a !important; /* เปลี่ยนพื้นหลังเป็นแดง SWU */
+    border-color: #bb1c1a !important;     /* เปลี่ยนสีกรอบเป็นแดง */
+    transform: translateY(-5px);         /* ให้ Card ลอยขึ้นนิดนึงแบบเว็บสมัยใหม่ */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* เปลี่ยนสีตัวหนังสือทั้งหมดใน Card เป็นสีขาวเมื่อ Hover */
+.card-news:hover .card-title, 
+.card-news:hover .card-text, 
+.card-news:hover .text-muted,
+.card-news:hover i,
+.card-activities:hover .card-title,
+.card-activities:hover .card-text,
+.card-activities:hover .text-muted,
+.card-activities:hover i {
+    color: #ffffff !important;
+}
+
+/* เปลี่ยนสีปุ่ม Read More เป็นสีขาวเมื่อ Hover */
+.card-news:hover a, .card-activities:hover a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
 /* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */
 .transition-hover {
     transition: opacity 0.3s, transform 0.3s, color 0.3s;
