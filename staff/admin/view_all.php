@@ -114,96 +114,114 @@ try {
     </style>
 </head>
 <body>
-
-<div class="container-fluid py-4">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-11">
-            
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h4 class="fw-bold mb-0 text-dark">จัดการคำร้องทั้งหมด (Admin)</h4>
-                <a href="index.php" class="btn btn-outline-secondary btn-sm">กลับหน้า Dashboard</a>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4" style="border-bottom: 3px solid #931e1e; padding: 15px 0;">
+    <div class="container-fluid px-md-5">
+        <div class="navbar-brand d-flex align-items-center">
+            <img src="/hu_internships/img/swulogo_en.png" 
+                 alt="SWU Logo" 
+                 width="60" 
+                 height="60" 
+                 class="d-inline-block align-top me-3 bg-white rounded-circle p-1 border">
+            <div>
+                <h5 class="mb-0 fw-bold" style="color: #931e1e; font-size: 22px; line-height: 1;">จัดการคำร้องทั้งหมด (Admin)</h5>
+                <small class="text-muted" style="font-size: 0.75rem; letter-spacing: 1px;">SRINAKHARINWIROT UNIVERSITY</small>
             </div>
+        </div>
 
-            <div class="search-container mb-4">
-                <form method="GET" action="view_all.php">
-                    <div class="search-input-group">
-                        <i class="bi bi-people-fill"></i>
-                        <input type="text" name="search" placeholder="ค้นหาคำร้องของ นิสิต" value="<?= htmlspecialchars($search) ?>">
-                        <select name="type">
-                            <option value="student">นิสิต</option>
-                        </select>
-                        <button type="submit" class="btn-search">ค้นหา</button>
-                    </div>
-                </form>
+        <div class="ms-auto">
+            <a href="index.php" 
+            class="btn fw-bold rounded-pill" 
+            style="background-color: white; color: black; padding: 10px 30px; transition: 0.3s; border: 2px solid #931e1e; font-size: 16px;"
+            onmouseover="this.style.backgroundColor='#931e1e'; this.style.color='white';" 
+            onmouseout="this.style.backgroundColor='white'; this.style.color='black';">กลับหน้า Dashboard
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid px-md-5">
+    <div class="search-container mb-4">
+        <form method="GET" action="view_all.php">
+            <div class="search-input-group">
+                <i class="bi bi-people-fill"></i>
+                <input type="text" name="search" placeholder="ค้นหาคำร้องของ นิสิต" value="<?= htmlspecialchars($search) ?>">
+                <select name="type" style="margin-left: 20px; margin-right: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 5px 15px;">
+                    <option value="student">นิสิต</option>
+                </select>
+                <button type="submit" class="btn-search fw-bold" 
+                        style="transition: 0.3s; color: #000;" 
+                        onmouseover="this.style.backgroundColor='#931e1e'; this.style.color='#ffffff'; this.style.borderColor='#a9a8a8';" 
+                        onmouseout="this.style.backgroundColor=''; this.style.color='#000'; this.style.borderColor='';">ค้นหา</button>
             </div>
+        </form>
+    </div>
 
-            <div class="card p-4">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="mb-0 fw-bold"><i class="bi bi-list-task me-2"></i> รายการคำร้อง</h5>
-                    <?php if($search !== ''): ?>
-                        <a href="view_all.php" class="text-decoration-none text-muted small">ล้างการค้นหา</a>
+    <div class="card p-4 shadow-sm" style="border-radius: 8px;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0 fw-bold"><i class="bi bi-list-task me-2"></i> รายการคำร้อง</h5>
+            <?php if($search !== ''): ?>
+                <a href="view_all.php" class="text-decoration-none text-muted small">ล้างการค้นหา</a>
+            <?php endif; ?>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th width="5%">#</th>
+                        <th width="12%">รหัสนิสิต</th>
+                        <th width="18%">ชื่อ-นามสกุล</th>
+                        <th width="15%">รายละเอียดข้อมูล</th> 
+                        <th width="12%">วันที่ยื่น</th>
+                        <th width="18%">สถานะ</th>
+                        <th width="20%">จัดการ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (!empty($requests)): ?>
+                    <?php foreach ($requests as $req): ?>
+                    <tr>
+                        <td><?php echo $req['request_id']; ?></td>
+                        <td><?php echo htmlspecialchars($req['student_id']); ?></td>
+                        <td class="text-start"><?php echo htmlspecialchars($req['fullname']); ?></td>
+                        <td>
+                            <a href="view_detail.php?id=<?= $req['request_id'] ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3"> ดูรายละเอียด </a>
+                        </td>
+                        <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
+                        <td>
+                            <?php 
+                                $badge_class = "bg-secondary";
+                                if($req['status_id'] == 2) $badge_class = "bg-info text-dark";
+                                if($req['status_id'] == 3) $badge_class = "bg-success";
+                                if($req['status_id'] == 4) $badge_class = "bg-primary";
+                                if($req['status_id'] == 9) $badge_class = "bg-danger";
+                            ?>
+                            <span class="badge rounded-pill <?php echo $badge_class; ?> px-3 py-2">
+                                <?php echo $req['status_name']; ?>
+                            </span>
+                        </td>
+                        <td>
+                            <form action="update_status.php" method="POST" class="d-flex gap-1 justify-content-center">
+                                <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
+                                <select name="status_id" class="form-select form-select-sm" style="width: auto;" required>
+                                    <option value="">-- แก้ไข --</option>
+                                    <option value="3" <?php if($req['status_id']==3) echo 'selected'; ?>>ออกหนังสือส่งตัวแล้ว</option>
+                                    <option value="4" <?php if($req['status_id']==4) echo 'selected'; ?>>เสร็จสิ้นการฝึกงาน</option>
+                                    <option value="9" <?php if($req['status_id']==9) echo 'selected'; ?>>ยกเลิก</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">บันทึก</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="7" class="text-center py-5 text-muted">ไม่พบข้อมูลที่ค้นหา</td>
+                        </tr>
                     <?php endif; ?>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle">
-                        <thead>
-                            <tr>
-                                <th width="5%">#</th>
-                                <th width="10%">รหัสนิสิต</th>
-                                <th width="15%">ชื่อ-นามสกุล</th>
-                                <th width="15%">รายละเอียดข้อมูล</th> 
-                                <th width="10%">วันที่ยื่น</th>
-                                <th width="15%">สถานะ</th>
-                                <th width="15%">จัดการ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php if (!empty($requests)): ?>
-                            <?php foreach ($requests as $req): ?>
-                            <tr>
-                                <td><?php echo $req['request_id']; ?></td>
-                                <td><?php echo htmlspecialchars($req['student_id']); ?></td>
-                                <td><?php echo htmlspecialchars($req['fullname']); ?></td>
-                                <td>
-                                    <a href="view_detail.php? id=<?= $req['request_id'] ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3"> ดูรายละเอียด </a>
-                                </td>
-                                <td><?php echo date('d/m/Y', strtotime($req['request_date'])); ?></td>
-                                <td>
-                                    <?php 
-                                        $badge_class = "bg-secondary";
-                                        if($req['status_id'] == 2) $badge_class = "bg-info text-dark";
-                                        if($req['status_id'] == 3) $badge_class = "bg-success";
-                                        if($req['status_id'] == 4) $badge_class = "bg-primary";
-                                        if($req['status_id'] == 9) $badge_class = "bg-danger";
-                                    ?>
-                                    <span class="badge rounded-pill <?php echo $badge_class; ?> px-3 py-2">
-                                        <?php echo $req['status_name']; ?>
-                                    </span>
-                                </td>
-                                <td>
-                                    <form action="update_status.php" method="POST" class="d-flex gap-1">
-                                        <input type="hidden" name="request_id" value="<?php echo $req['request_id']; ?>">
-                                        <select name="status_id" class="form-select form-select-sm" required>
-                                            <option value="">-- แก้ไข --</option>
-                                            <option value="3" <?php if($req['status_id']==3) echo 'selected'; ?>>ออกหนังสือส่งตัวแล้ว</option>
-                                            <option value="4" <?php if($req['status_id']==4) echo 'selected'; ?>>เสร็จสิ้นการฝึกงาน</option>
-                                            <option value="9" <?php if($req['status_id']==9) echo 'selected'; ?>>ยกเลิก</option>
-                                        </select>
-                                        <button type="submit" class="btn btn-primary btn-sm">บันทึก</button>
-                                    </form>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                            <?php else: ?>
-                                <tr>
-                                    <td colspan="7" class="text-center py-5 text-muted">ไม่พบข้อมูลที่ค้นหา</td>
-                                </tr>
-                            <?php endif; ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

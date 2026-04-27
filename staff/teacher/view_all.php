@@ -120,7 +120,7 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="row">
         <nav class="col-md-3 col-lg-2 d-md-block sidebar p-4 shadow">
             <div class="text-center mb-4">
-                <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
+                <img src="/hu_internships/img/swulogo_en.png" width="70" class="bg-white rounded-circle p-0 mb-2">
                 <h5 class="fw-bold">IS | SWU Teacher</h5>
             </div>
             <ul class="nav flex-column">
@@ -130,19 +130,26 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </ul>
         </nav>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-5 pb-4">
             
             <h3 class="fw-bold mb-4">ประวัติคำร้องของนิสิตทั้งหมด</h3>
-
-            <div class="search-container mb-4">
+            
+            <div class="search-container mb-3"> 
                 <form method="GET" action="view_all.php">
                     <div class="search-input-group">
                         <i class="bi bi-people-fill"></i>
                         <input type="text" name="search" placeholder="ค้นหาคำร้องของ นิสิต" value="<?= htmlspecialchars($search) ?>">
-                        <select name="type">
+                        
+                        <select name="type" style="margin-left: 30px; margin-right: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 5px 15px; background-color: white; cursor: pointer;">
                             <option value="student">นิสิต</option>
                         </select>
-                        <button type="submit" class="btn-search fw-bold text-dark">ค้นหา</button>
+
+                        <button type="submit" 
+                        class="btn-search fw-bold" 
+                        style="transition: 0.3s; color: #000; border-radius: 8px;" 
+                        onmouseover="this.style.backgroundColor='#cf3737'; this.style.color='#fff'; this.style.borderColor='#cf3737';" 
+                        onmouseout="this.style.backgroundColor=''; this.style.color='#000'; this.style.borderColor='';">ค้นหา
+                        </button>
                     </div>
                 </form>
             </div>

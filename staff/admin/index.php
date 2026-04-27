@@ -100,7 +100,7 @@ try {
     <div class="row">
         <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar p-4 sticky-top">
             <div class="text-center mb-4">
-                <img src="https://unity.swu.ac.th/wp-content/uploads/2020/06/Srinakharinwirot_Logo_EN_Color-1-300x300.jpg" width="60" class="bg-white rounded-circle p-1 mb-2">
+                <img src="/hu_internships/img/swulogo_en.png" width="70" class="bg-white rounded-circle p-0 mb-2">
                 <h5 class="fw-bold">Admin Panel</h5>
             </div>
             <ul class="nav flex-column">
