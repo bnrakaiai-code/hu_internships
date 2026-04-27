@@ -44,7 +44,7 @@ html {
 
 /* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
 .hero-section.slide-1 {
-    background: linear-gradient(rgba(193, 53, 53, 0.7), rgba(248, 115, 115, 0.7)), 
+    background: linear-gradient(rgba(193, 53, 53, 0.6), rgba(248, 115, 115, 0.6)), 
                 url('./img/slide1.jpg');
     background-size: cover;
     background-position: center;
