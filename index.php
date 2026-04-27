@@ -131,9 +131,9 @@
     <section id="showcase" class="py-5 bg-light anchor-section">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-6 mb-lg-0">
+                <div class="col-lg-6 mb-6 mb-lg-0" data-aos="fade-right">
                     <h2 class="font-serif text-swu-red fw-bold mb-4">ข้อมูลหลักสูตร</h2>
-                    <p class="text-muted mb-4 line-height-lg course-info-text">
+                        <p class="text-muted mb-4 line-height-lg course-info-text">
                         รหัสและชื่อหลักสูตร <br>
                         รหัสหลักสูตร 25520091104002 <br>
                         ภาษาไทย : หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา <br>
@@ -145,15 +145,12 @@
                         ภาษาอังกฤษ <br>
                         ชื่อเต็ม : Bachelor of Arts (Information Studies) <br>
                         ชื่อย่อ : B.A. (Information Studies)</p>
-                    <a class="btn btn-swu rounded-pill" href="about.php" style="padding: 8px 25px;">
-                        อ่านเพิ่มเติม <i class="bi bi-arrow-up-right"></i>
-                    </a>
+                        <a class="btn btn-swu rounded-pill" href="about.php" style="padding: 8px 25px;">
+                            อ่านเพิ่มเติม <i class="bi bi-arrow-up-right"></i>
+                        </a>
                 </div>
-                <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden">
-                    <img src="./img/student1.jpg" 
-                         alt="Students studying" 
-                         class="w-100 h-100" 
-                         style="object-fit: cover;">
+                <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden" data-aos="fade-left">
+                    <img src="./img/student1.jpg" class="w-100 h-100" style="object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -167,7 +164,7 @@
             </h2>
             <div class="row">
                 <!-- News Item 1 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card card-news h-100 p-3">
                         <img src="./img/news1.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -183,7 +180,7 @@
                     </div>
                 </div>
                 <!-- News Item 2 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card card-news h-100 p-3">
                         <img src="./img/news2.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -199,7 +196,7 @@
                     </div>
                 </div>
                 <!-- News Item 3 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card card-news h-100 p-3">
                         <img src="./img/news3.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -226,7 +223,7 @@
             </h2>
             <div class="row">
                 <!-- activities Item 1 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card card-activities h-100 p-3">
                         <img src="./img/ativity1.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -242,7 +239,7 @@
                     </div>
                 </div>
                 <!-- activities Item 2 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card card-activities h-100 p-3">
                         <img src="./img/ativity2.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -258,7 +255,7 @@
                     </div>
                 </div>
                 <!-- activities Item 3 -->
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card card-activities h-100 p-3">
                         <img src="./img/ativity3.jpg" style="width: 100%; height: 250px; object-fit: cover;" class="card-img-top rounded-3 mb-3" alt="Event">
                         <div class="card-body p-0">
@@ -276,6 +273,16 @@
             </div>
         </div>
     </section>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000, // ระยะเวลาของอนิเมชั่น (มิลลิวินาที)
+        once: true,     // ให้แสดงเอฟเฟกต์แค่ครั้งเดียวตอนเลื่อนผ่าน
+        });
+    </script>
 
 <!-- Footer Section -->
     <footer class="py-5 text-white" style="background-color: #931e1e;">
