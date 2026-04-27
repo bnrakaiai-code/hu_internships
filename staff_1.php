@@ -70,7 +70,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/Dit-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ดิษฐ์">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ดิษฐ์ สุทธิวงศ์</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/dit.pdf" target="_blank" class="text-dark text-decoration-none">
+                                อาจารย์ ดร. ดิษฐ์ สุทธิวงศ์
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">(ประธานกรรมการบริหารหลักสูตร)</p>
                         <p class="text-muted small">Lecturer Dit Suthiwong, Ph.D.</p>
                         <a href="mailto:dit@g.swu.ac.th" class="email-link text-decoration-none">
@@ -86,7 +90,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2021/01/thiti-scaled.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ฐิติ">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ฐิติ อติชาติชยากร</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://sites.google.com/g.swu.ac.th/thitia" target="_blank" class="text-dark text-decoration-none">
+                                อาจารย์ ดร. ฐิติ อติชาติชยากร
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">(เลขานุการหลักสูตร)</p>
                         <p class="text-muted small">Lecturer Thiti Atichartchayakorn, Ph.D.</p>
                         <a href="mailto:thitik@g.swu.ac.th" class="email-link text-decoration-none">
@@ -104,7 +112,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Vipakorn-683x1024.jpg" class="staff-img w-100" alt="ผศ.ดร. วิภากร">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">ผศ.ดร. วิภากร วัฒนสินธุ์</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/vipakorn.pdf" target="_blank" class="text-dark text-decoration-none">
+                                ผศ.ดร. วิภากร วัฒนสินธุ์
+                            </a>
+                        </h5>
                         <p class="text-muted small mb-2">Assistant Professor Vipakorn Vadhanasin, Ph.D.</p>
                         <a href="mailto:vipakorn@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> vipakorn@g.swu.ac.th
@@ -119,7 +131,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2025/02/Chokthamrong.jpg" class="staff-img w-100" alt="อาจารย์ ดร. โชคธำรงค์">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">อาจารย์ ดร. โชคธำรงค์ จงจอหอ</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/chokthamrong.pdf" target="_blank" class="text-dark text-decoration-none">
+                                อาจารย์ ดร. โชคธำรงค์ จงจอหอ
+                            </a>
+                        </h5>
                         <p class="text-muted small mb-2">Lecturer Chokthamrong Chongchorhor, Ph.D.</p>
                         <a href="mailto:chokthamrong@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> chokthamrong@g.swu.ac.th
@@ -134,7 +150,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2025/11/Chotima.jpg" class="staff-img w-100" alt="อาจารย์โชติมา">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">อาจารย์โชติมา วัฒนะ</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/chotima.pdf" target="_blank" class="text-dark text-decoration-none">
+                                อาจารย์โชติมา วัฒนะ
+                            </a>
+                        </h5>
                         <p class="text-muted small mb-2">Lecturer Chotima Watana</p>
                         <a href="mailto:chotimaw@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> chotimaw@g.swu.ac.th
@@ -153,7 +173,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Dussadee-683x1024.jpg" class="staff-img w-100" alt="ผศ.ดร. ดุษฎี">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">ผศ.ดร. ดุษฎี สีวังคำ</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/dussadee.pdf" target="_blank" class="text-dark text-decoration-none">
+                                ผศ.ดร. ดุษฎี สีวังคำ
+                            </a>
+                        </h5>
                         <p class="text-muted small">Assistant Professor Dussadee Seewungkum, Ph.D.</p>
                         <a href="mailto:dussadee@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> dussadee@g.swu.ac.th
@@ -168,7 +192,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Sasipimol-683x1024.jpg" class="staff-img w-100" alt="ผศ.ดร. ศศิพิมล">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">ผู้ช่วยศาสตราจารย์ ดร. ศศิพิมล ประพินพงศกร</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/sasipimol.pdf" target="_blank" class="text-dark text-decoration-none">
+                                ผู้ช่วยศาสตราจารย์ ดร. ศศิพิมล ประพินพงศกร
+                            </a>
+                        </h5>
                         <p class="text-muted small">Assistant Professor Sasipimol Prapinpongsakorn, Ph.D., FHEA</p>
                         <a href="mailto:sasipimol@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> sasipimol@g.swu.ac.th
@@ -183,7 +211,11 @@
                         <img src="https://is.hu.swu.ac.th/wp-content/uploads/2020/02/Sumattra-683x1024.jpg" class="staff-img w-100" alt="อาจารย์ ดร. ศุมรรษตรา">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">อาจารย์ ดร. ศุมรรษตรา แสนวา</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="https://is.hu.swu.ac.th/cv/sumattra.pdf" target="_blank" class="text-dark text-decoration-none">
+                                อาจารย์ ดร. ศุมรรษตรา แสนวา
+                            </a>
+                        </h5>
                         <p class="text-muted small">Lecturer Sumattra Saenwa, Ph.D., FHEA</p>
                         <a href="mailto:sumattra@g.swu.ac.th" class="email-link text-decoration-none">
                             <i class="bi bi-envelope-at-fill"></i> sumattra@g.swu.ac.th

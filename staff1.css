@@ -123,7 +123,19 @@ body {
     text-decoration: underline; 
 }
 
-/* Footer Icon Hover Effect (พี่เพิ่มให้ตรงนี้ครับ) */
+/* 1. ขีดเส้นใต้ปรากฏขึ้นมาที่ชื่ออาจารย์เวลาเอาเมาส์ไปชี้แล้วดูสมูท */
+.staff-card h5 a {
+    transition: all 0.3s ease;
+    text-decoration: none !important; /* บังคับไม่ให้มีเส้นใต้ในสภาวะปกติ */
+}
+
+/* 2. ตั้งค่าตอนเอาเมาส์ชี้ (Hover) */
+.staff-card h5 a:hover {
+    color: #990000 !important;          /* เปลี่ยนเป็นสีแดง */
+    text-decoration: underline !important; /* เพิ่มขีดเส้นใต้ */
+}
+
+/* Footer Icon Hover Effect */
 .transition-hover {
     transition: opacity 0.3s, transform 0.3s, color 0.3s;
     display: inline-block;
