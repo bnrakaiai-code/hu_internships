@@ -22,7 +22,7 @@ if ($search !== '') {
     $query_str .= " WHERE st.fullname LIKE :search OR st.student_id LIKE :search ";
 }
 
-$query_str .= " ORDER BY r.request_date DESC";
+$query_str .= " ORDER BY r.request_date ASC";
 
 $stmt = $conn->prepare($query_str);
 
@@ -121,7 +121,7 @@ $all_requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <nav class="col-md-3 col-lg-2 d-md-block sidebar p-4 shadow">
             <div class="text-center mb-4">
                 <img src="/hu_internships/img/swulogo_en.png" width="70" class="bg-white rounded-circle p-0 mb-2">
-                <h5 class="fw-bold">IS | SWU Teacher</h5>
+                <h5 class="fw-bold">Teacher Panel</h5>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link" href="index.php"><i class="bi bi-house-door me-2"></i> หน้าแรก</a></li>

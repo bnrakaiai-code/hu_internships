@@ -17,7 +17,7 @@ $stmt_approved = $conn->query("SELECT COUNT(*) FROM internship_requests WHERE st
 $approved_count = $stmt_approved->fetchColumn();
 
 // ดึงข้อมูลคำร้องที่ "รออาจารย์ตรวจสอบ" (status_id = 1)
-$stmt_requests = $conn->query("SELECT * FROM internship_requests WHERE status_id = 1 ORDER BY request_date DESC");
+$stmt_requests = $conn->query("SELECT * FROM internship_requests WHERE status_id = 1 ORDER BY request_date ASC");
 $pending_requests = $stmt_requests->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
