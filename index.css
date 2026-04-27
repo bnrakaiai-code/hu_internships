@@ -18,8 +18,22 @@ html {
     font-weight: 500;
 }
 
+/* Navbar Link เมื่อเอาเมาส์ไปชี้ */
 .navbar-swu .nav-link:hover {
     color: #931e1e !important;
+    text-decoration: underline !important;
+    /* เพิ่มบรรทัดนี้เพื่อกำหนดระยะห่างของเส้น */
+    text-underline-offset: 8px; 
+    /* ปรับความหนาของเส้น (ถ้าต้องการ) */
+    text-decoration-thickness: 2px;
+}
+
+/* ส่วนของเมนูย่อย (Dropdown) ปรับให้เหมือนกันเวลาเอาเมาส์ไปชี้ */
+.dropdown-item:hover {
+    color: #931e1e !important;
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
+    background-color: transparent !important;
 }
 
 .navbar-swu .navbar-brand {
@@ -30,7 +44,7 @@ html {
 
 /* --- ส่วนของ Hero (แบนเนอร์ด้านบน) Slide 1 --- */
 .hero-section.slide-1 {
-    background: linear-gradient(rgba(193, 53, 53, 0.8), rgba(248, 115, 115, 0.8)), 
+    background: linear-gradient(rgba(193, 53, 53, 0.6), rgba(248, 115, 115, 0.6)), 
                 url('./img/slide1.jpg');
     background-size: cover;
     background-position: center;
@@ -41,7 +55,7 @@ html {
 
 /* Slide 2: ข่าวประชาสัมพันธ์ */
 .hero-section.slide-2 {
-    background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
+    background: linear-gradient(rgba(147, 30, 30, 0.4), rgba(147, 30, 30, 0.4)), 
                 url('./img/slide2.jpg');
     background-size: cover;
     background-position: center;
@@ -51,7 +65,7 @@ html {
 
 /* Slide 3: กิจกรรมสาขาวิชา */
 .hero-section.slide-3 {
-    background: linear-gradient(rgba(147, 30, 30, 0.6), rgba(147, 30, 30, 0.6)), 
+    background: linear-gradient(rgba(147, 30, 30, 0.4), rgba(147, 30, 30, 0.4)), 
                 url('./img/slide3.jpg');
     background-size: cover;
     background-position: center;
@@ -180,6 +194,38 @@ html {
 .card-activities:hover {
     transform: translateY(-8px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+/* ตั้งค่า Transition ให้การเปลี่ยนสีดูนุ่มนวล */
+.card-news, .card-activities {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* เปลี่ยนเป็นสีแดงเมื่อเอาเมาส์ไปชี้ที่ Card */
+.card-news:hover, .card-activities:hover {
+    background-color: #bb1c1a !important; /* เปลี่ยนพื้นหลังเป็นแดง SWU */
+    border-color: #bb1c1a !important;     /* เปลี่ยนสีกรอบเป็นแดง */
+    transform: translateY(-5px);         /* ให้ Card ลอยขึ้นนิดนึงแบบเว็บสมัยใหม่ */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* เปลี่ยนสีตัวหนังสือทั้งหมดใน Card เป็นสีขาวเมื่อ Hover */
+.card-news:hover .card-title, 
+.card-news:hover .card-text, 
+.card-news:hover .text-muted,
+.card-news:hover i,
+.card-activities:hover .card-title,
+.card-activities:hover .card-text,
+.card-activities:hover .text-muted,
+.card-activities:hover i {
+    color: #ffffff !important;
+}
+
+/* เปลี่ยนสีปุ่ม Read More เป็นสีขาวเมื่อ Hover */
+.card-news:hover a, .card-activities:hover a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
 
 /* --- เอฟเฟกต์ไอคอน Footer (transition-hover) --- */

@@ -10,7 +10,7 @@
      <link rel="stylesheet" href="./about.css"> </head>
 <body>
 <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg navbar-dark navbar-swu sticky-top shadow">
+     <nav class="navbar navbar-expand-lg navbar-light navbar-swu sticky-top shadow">
           <div class="container">
                <a class="navbar-brand fw-bold d-flex align-items-center" href="index.php">
                <img src="/hu_internships/img/swulogo_en.png" 
