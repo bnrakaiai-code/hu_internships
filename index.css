@@ -175,50 +175,25 @@ html {
     transform: scale(1.05); 
 }
 
-/* --- การ์ดข่าวสาร --- */
-.card-news {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* --- การ์ดข่าสาร & กิจกรรม --- */
 
-.card-news:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
-}
-
-/* --- การ์ดกิจกรรม --- */
-
-.card-activities {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-activities:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
-}
-
-/* ตั้งค่า Transition ให้การเปลี่ยนสีดูนุ่มนวล */
+/* 1. ตั้งค่า Transition และ Cursor พื้นฐาน */
 .card-news, .card-activities {
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-/* เปลี่ยนเป็นสีแดงเมื่อเอาเมาส์ไปชี้ที่ Card */
+/* 2. เมื่อเอาเมาส์มาชี้ (Hover) ให้เปลี่ยนพื้นหลังและยกตัวขึ้น */
 .card-news:hover, .card-activities:hover {
-    background-color: #bb1c1a !important; /* เปลี่ยนพื้นหลังเป็นแดง SWU */
-    border-color: #bb1c1a !important;     /* เปลี่ยนสีกรอบเป็นแดง */
-    transform: translateY(-5px);         /* ให้ Card ลอยขึ้นนิดนึงแบบเว็บสมัยใหม่ */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #bb1c1a !important; 
+    border-color: #bb1c1a !important;    
+    transform: translateY(-8px);         
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* เปลี่ยนสีตัวหนังสือทั้งหมดใน Card เป็นสีขาวเมื่อ Hover */
-.card-news:hover .card-title, 
-.card-news:hover .card-text, 
-.card-news:hover .text-muted,
-.card-news:hover i,
-.card-activities:hover .card-title,
-.card-activities:hover .card-text,
-.card-activities:hover .text-muted,
-.card-activities:hover i {
+/* 3. เมื่อ Hover ให้เปลี่ยนสีลูกๆ ทุกตัวข้างในเป็นสีขาว */
+.card-news:hover *, 
+.card-activities:hover * {
     color: #ffffff !important;
 }
 

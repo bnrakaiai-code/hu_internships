@@ -131,7 +131,7 @@
     <section id="showcase" class="py-5 bg-light anchor-section">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-6 mb-lg-0" data-aos="fade-right">
+                <div class="col-lg-6 mb-6 mb-lg-0">
                     <h2 class="font-serif text-swu-red fw-bold mb-4">ข้อมูลหลักสูตร</h2>
                         <p class="text-muted mb-4 line-height-lg course-info-text">
                         รหัสและชื่อหลักสูตร <br>
@@ -149,7 +149,7 @@
                             อ่านเพิ่มเติม <i class="bi bi-arrow-up-right"></i>
                         </a>
                 </div>
-                <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden" data-aos="fade-left">
+                <div class="col-lg-5 offset-lg-1 shadow rounded-4 p-0 overflow-hidden">
                     <img src="./img/student1.jpg" class="w-100 h-100" style="object-fit: cover;">
                 </div>
             </div>
