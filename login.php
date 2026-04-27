@@ -42,6 +42,26 @@ unset($_SESSION['error']);
             color: white; 
             transform: scale(1.02); 
         }
+        
+        /* เพิ่ม CSS สำหรับปุ่มซ่อน/แสดงรหัสผ่าน */
+        .peek-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: #888;
+            z-index: 10;
+            padding: 0;
+        }
+        .peek-btn:hover {
+            color: #333;
+        }
+        .peek-btn:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -64,10 +84,17 @@ unset($_SESSION['error']);
                 <label class="form-label">ชื่อผู้ใช้งาน / รหัสนิสิต</label>
                 <input type="text" class="form-control" name="username" placeholder="user" required>
             </div>
+            
             <div class="mb-4">
                 <label class="form-label">รหัสผ่าน</label>
-                <input type="password" class="form-control" name="password" placeholder="password" required>
+                <div class="position-relative">
+                    <input type="password" class="form-control pe-5" id="password" name="password" placeholder="password" required>
+                    <button type="button" class="peek-btn" id="togglePassword">
+                        <i class="bi bi-eye-slash" id="toggleIcon"></i>
+                    </button>
+                </div>
             </div>
+
             <button type="submit" class="btn btn-swu w-100 mb-3">
                 <i class="bi bi-box-arrow-in-right me-2"></i> เข้าสู่ระบบ
             </button>
@@ -81,5 +108,21 @@ unset($_SESSION['error']);
             </div>
         </form>
     </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        const toggleIcon = document.querySelector('#toggleIcon');
+
+        togglePassword.addEventListener('click', function (e) {
+            // สลับการแสดงผล password/text
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            // สลับไอคอนดวงตา
+            toggleIcon.classList.toggle('bi-eye');
+            toggleIcon.classList.toggle('bi-eye-slash');
+        });
+    </script>
 </body>
 </html>

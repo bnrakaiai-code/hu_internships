@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || ($_SESSION['role'] !== 'teacher' && $_SESSIO
     exit();
 }
 
-// --- ส่วนที่เพิ่ม/แก้ไข: รับค่าการค้นหา ---
+// --- รับค่าการค้นหา ---
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
 // เตรียม Query
