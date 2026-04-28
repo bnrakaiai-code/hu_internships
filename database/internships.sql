@@ -116,3 +116,31 @@ INSERT IGNORE INTO students (student_id, fullname, email, phone, year_level, maj
 INSERT INTO staff (staff_id, username, password, role) VALUES
 ('AM01', 'admin', '1234', 'admin'),
 ('TC01', 'teacher', '1234', 'teacher');
+
+-- เพิ่มบริษัท
+INSERT INTO companies (company_id, company_name, company_address, contact_person) VALUES
+('12001', 'SM ent.', 'Seoul, Korea', 'Suman(0901234567)'),
+('12002', 'GMM Grammy', 'Sukhumvit, Bangkok', 'Khun Jay(0912345678)'),
+('12003', 'TADA Ent.', 'Pathum Wan, Bangkok', 'Khun Rose(0823456789)'),
+('12004', 'Workpoint', 'Pathum Thani', 'Khun Mark(0834567890)'),
+('12005', 'Line Thailand', 'Ploenchit, Bangkok', 'Khun Brown(0845678901)'),
+('12006', 'TikTok TH', 'Siam Square, Bangkok', 'Khun Bella(0856789012)'),
+('12007', 'Shopee TH', 'Rama 4, Bangkok', 'Khun Shop(0867890123)'),
+('12008', 'Lazada TH', 'Sukhumvit, Bangkok', 'Khun Laz(0878901234)'),
+('12009', 'True Corp', 'Ratchada, Bangkok', 'Khun True(0889012345)'),
+('12010', 'AIS', 'Phahonyothin, Bangkok', 'Khun Oun(0890123456)');
+
+-- เพิ่มรายการฝึกงาน
+INSERT INTO internship_requests 
+(student_id, company_id, position_title, start_date, end_date, request_document, status_id)
+VALUES 
+('65101010115', '12001', 'developer', '2026-06-01', '2026-09-01', '65101010115.pdf', 1),
+('65101010552', '12002', 'creative', '2026-07-01', '2026-10-01', '65101010552.pdf', 1),
+('65101010814', '12003', 'developer', '2026-05-01', '2026-08-01', '65101010814.pdf', 1),
+('65101010423', '12004', 'content creator', '2026-08-31', '2026-11-30', '65101010423.pdf', 1),
+('65101010291', '12005', 'ux/ui designer', '2026-09-01', '2026-12-01', '65101010291.pdf', 1),
+('65101010776', '12006', 'data analyst', '2026-06-10', '2026-09-10', '65101010776.pdf', 1),
+('65101010998', '12007', 'marketing', '2026-06-21', '2026-09-21', '65101010998.pdf', 1),
+('65101010362', '12008', 'developer', '2026-07-11', '2026-10-11', '65101010362.pdf', 1),
+('65101010649', '12009', 'network engineer', '2026-09-01', '2026-12-01', '65101010649.pdf', 1),
+('65101010881', '12010', 'it support', '2026-05-01', '2026-08-01', '65101010881.pdf', 1);
