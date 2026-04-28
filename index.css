@@ -53,8 +53,17 @@ html {
     text-align: center;
 }
 
-/* Slide 2: ข่าวประชาสัมพันธ์ */
+/* Slide 2: ไว้อาลัย */
 .hero-section.slide-2 {
+    background: url('./img/r.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0; 
+}
+
+/* Slide 3: ข่าวประชาสัมพันธ์ */
+.hero-section.slide-3 {
     background: linear-gradient(rgba(147, 30, 30, 0.4), rgba(147, 30, 30, 0.4)), 
                 url('./img/slide2.jpg');
     background-size: cover;
@@ -63,8 +72,8 @@ html {
     text-align: center;
 }
 
-/* Slide 3: กิจกรรมสาขาวิชา */
-.hero-section.slide-3 {
+/* Slide 4: กิจกรรมสาขาวิชา */
+.hero-section.slide-4 {
     background: linear-gradient(rgba(147, 30, 30, 0.4), rgba(147, 30, 30, 0.4)), 
                 url('./img/slide3.jpg');
     background-size: cover;
@@ -72,24 +81,6 @@ html {
     color: white; 
     padding: 200px 0;
     text-align: center;
-}
-
-/* --- Slide 2 Custom Colors --- */
-/* สีหัวข้อ Slide 2 */
-.slide-title-custom-2 {
-    color: #ffffff; /* เปลี่ยนโค้ดสีที่นี่ */
-}
-
-/* สีปุ่ม Slide 2 */
-.btn-custom-2 {
-    background-color: #f9ed95; /* สีพื้นหลังปุ่ม */
-    color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
-    border: none;
-    transition: 0.3s;
-}
-.btn-custom-2:hover {
-    background-color: #e0c229; /* สีตอนเอาเม้าส์วาง */
-    color: #fff;
 }
 
 /* --- Slide 3 Custom Colors --- */
@@ -100,12 +91,30 @@ html {
 
 /* สีปุ่ม Slide 3 */
 .btn-custom-3 {
+    background-color: #f9ed95; /* สีพื้นหลังปุ่ม */
+    color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
+    border: none;
+    transition: 0.3s;
+}
+.btn-custom-2:hover {
+    background-color: #e0c229; /* สีตอนเอาเม้าส์วาง */
+    color: #fff;
+}
+
+/* --- Slide 4 Custom Colors --- */
+/* สีหัวข้อ Slide 4 */
+.slide-title-custom-3 {
+    color: #ffffff; /* เปลี่ยนโค้ดสีที่นี่ */
+}
+
+/* สีปุ่ม Slide 4 */
+.btn-custom-4 {
     background-color: #a8dadc; /* สีพื้นหลังปุ่ม */
     color: #0a0a0a;               /* สีตัวอักษรในปุ่ม */
     border: none;
     transition: 0.3s;
 }
-.btn-custom-3:hover {
+.btn-custom-4:hover {
     background-color: #457b9d; /* สีตอนเอาเม้าส์วาง */
     color: #fff;
 }

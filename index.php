@@ -67,11 +67,12 @@
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#swuCarousel" data-bs-slide-to="3"></button>
     </div>
-    <!-- Slide 1 -->
+    <!-- slide 1 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="hero-section slide-1">
+            <div class="hero-section slide-1" style="height: 550px; padding: 0; display: flex; align-items: center;">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-10 col-lg-8 text-start">
@@ -97,21 +98,26 @@
                 </div>
             </div>
         </div>
-        <!-- Slide 2 -->        
+        <!-- slide 2 -->
         <div class="carousel-item">
-            <div class="hero-section slide-2">
+            <div class="hero-section slide-2" style="height: 550px; padding: 0;">
+            </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="carousel-item">
+            <div class="hero-section slide-3" style="height: 550px; padding: 0; display: flex; align-items: center; justify-content: center;">
                 <div class="container text-white text-center">
-                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-2">- ข่าวประชาสัมพันธ์ -</h1>
+                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-3">- ข่าวประชาสัมพันธ์ -</h1>
                     <p class="fs-5 animate__animated animate__fadeInUp animate__delay-1s">ติดตามข่าวสารและประกาศจากทางสาขาวิชา</p>
                     <a href="#news" class="btn btn-custom-2 rounded-pill px-4 animate__animated animate__fadeInUp animate__delay-2s">อ่านข่าวทั้งหมด</a>
                 </div>
             </div>
         </div>
-        <!-- Slide 3 -->
+        <!-- slide 4 -->
         <div class="carousel-item">
-            <div class="hero-section slide-3">
+            <div class="hero-section slide-4" style="height: 550px; padding: 0; display: flex; align-items: center; justify-content: center;">
                 <div class="container text-white text-center">
-                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-3">- กิจกรรมสาขาวิชา -</h1>
+                    <h1 class="display-4 fw-bold animate__animated animate__fadeInUp slide-title-custom-4">- กิจกรรมสาขาวิชา -</h1>
                     <p class="fs-5 animate__animated animate__fadeInUp animate__delay-1s">ภาพบรรยากาศกิจกรรมและการพัฒนานิสิต</p>
                     <a href="#activities" class="btn btn-custom-3 rounded-pill px-4 animate__animated animate__fadeInUp animate__delay-2s">ดูกิจกรรมทั้งหมด</a>
                 </div>
@@ -155,7 +161,7 @@
             </div>
         </div>
     </section>
-    
+
 <!-- ข้อมูลการฝึกงาน -->
     <section id="internship-info" class="py-5 bg-light anchor-section">
         <div class="container py-5">
