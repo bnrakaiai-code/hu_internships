@@ -71,7 +71,11 @@
                         <img src="./img/paployii.jpg" class="staff-img w-100" alt="Bundita">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">นางสาวบัณฑิตา จินรัตน์</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="./img/ploy.jpg" target="_blank" class="text-dark text-decoration-none">
+                                นางสาวบัณฑิตา จินรัตน์
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">67101010629</p>
                         <p class="text-muted small">Bundita Chinrat</p>
                         <a href="mailto:bundita.bunny@g.swu.ac.th" class="email-link text-decoration-none">
@@ -87,7 +91,11 @@
                         <img src="./img/saalee.jpg" class="staff-img w-100" alt="Boonraksa">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">นางสาวบุญรักษา น้อยอ้าย</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="./img/saa.jpg" target="_blank" class="text-dark text-decoration-none">
+                                นางสาวบุญรักษา น้อยอ้าย
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">67101010630</p>
                         <p class="text-muted small">Boonraksa Noiai</p>
                         <a href="mailto:boonraksa.aiai@g.swu.ac.th" class="email-link text-decoration-none">
@@ -106,7 +114,11 @@
                         <img src="./img/hana.jpg" class="staff-img w-100" alt="Papitchaya">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">นางสาวปพิชญา จงศรีวัฒนาพร</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="./img/hanaaa.jpg" target="_blank" class="text-dark text-decoration-none">
+                                นางสาวปพิชญา จงศรีวัฒนาพร
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">67101010631</p>
                         <p class="text-muted small">Papitchaya Jongsriwattanaporn</p>
                         <a href="mailto:papitchaya.hana@g.swu.ac.th" class="email-link text-decoration-none">
@@ -122,7 +134,11 @@
                         <img src="./img/pimkim.jpg" class="staff-img w-100" alt="Mopim">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="fw-bold mb-1">นางสาวโม๋พิม สุขประเสริฐ</h5>
+                        <h5 class="fw-bold mb-1">
+                            <a href="./img/pim.jpg" target="_blank" class="text-dark text-decoration-none">
+                                นางสาวโม๋พิม สุขประเสริฐ
+                            </a>
+                        </h5>
                         <p class="text-danger small fw-bold mb-1">67101010644</p>
                         <p class="text-muted small">Mopim Sukprasert</p>
                         <a href="mailto:mopim.sukprasert@g.swu.ac.th" class="email-link text-decoration-none">

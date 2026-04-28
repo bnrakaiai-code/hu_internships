@@ -328,7 +328,11 @@
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                 <h5 class="fw-bold">Information Studies, SWU</h5>
-                <p class="mb-0 small opacity-75">© 2026 สาขาวิชาสารสนเทศศึกษา คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+                <p class="mb-2 small opacity-75">© 2026 สาขาวิชาสารสนเทศศึกษา คณะมนุษยศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+                
+                <a href="./img/site_map.jpg" class="btn btn-sm btn-outline-light mt-2 rounded-pill px-3 transition-hover">
+                    <i class="bi bi-diagram-3 me-1"></i> ผังเว็บไซต์ (Site Map)
+                </a>
             </div>
             
             <div class="col-md-6 text-center text-md-end">
