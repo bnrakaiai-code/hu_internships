@@ -21,7 +21,7 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-// redirect ไปหน้า login
-header("Location: login.php");
+// redirect ไปหน้าหลัก
+header("Location: index.php");
 exit();
 ?>
