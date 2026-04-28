@@ -155,6 +155,38 @@
             </div>
         </div>
     </section>
+    
+<!-- ข้อมูลการฝึกงาน -->
+    <section id="internship-info" class="py-5 bg-light anchor-section">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 shadow rounded-4 p-0 overflow-hidden">
+                    <img src="./img/intern.jpg" class="w-100 h-100" style="min-height: 400px; object-fit: cover;" alt="Internship Image">
+                </div>
+
+                <div class="col-lg-6 offset-lg-1">
+                    <h2 class="font-serif text-swu-red fw-bold mb-4">รายละเอียดการฝึกงาน</h2>
+                    <div class="text-muted mb-4 line-height-lg course-info-text">
+                        <h5 class="fw-bold text-dark">หลักสูตรศิลปศาสตรบัณฑิต สาขาวิชาสารสนเทศศึกษา</h5>
+                        <p>นิสิตจะได้ฝึกปฏิบัติงานวิชาชีพในสถานประกอบการจริง เพื่อประยุกต์ใช้ความรู้ด้านการจัดการสารสนเทศ เทคโนโลยี และการบริการในหน่วยงานชั้นนำ เช่น:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check2-circle text-swu-red me-2"></i> หอสมุดและศูนย์วิทยบริการ</li>
+                            <li><i class="bi bi-check2-circle text-swu-red me-2"></i> ศูนย์ข้อมูลและหน่วยจดหมายเหตุ</li>
+                            <li><i class="bi bi-check2-circle text-swu-red me-2"></i> องค์กรภาครัฐและเอกชนที่เน้นการจัดการ Data</li>
+                        </ul>
+                        <p>มุ่งเน้นการเสริมสร้างทักษะการทำงานร่วมกับผู้อื่น และความเชี่ยวชาญในวิชาชีพสารสนเทศตามมาตรฐานสากล</p>
+                    </div>
+                    
+                    <a class="btn btn-swu rounded-pill" 
+                       href="https://hu.swu.ac.th/Portals/5/file/66/220366_2.pdf?ver=2tRHbI0xWf4133HCyAG-1Q%3D%3D" 
+                       target="_blank" 
+                       style="padding: 8px 25px;">
+                        รายละเอียดการฝึกงานและเอกสารยื่นคำร้อง <i class="bi bi-file-earmark-pdf ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- ประชาสัมพันธ์ -->
     <section id="news" class="bg-light py-5">
